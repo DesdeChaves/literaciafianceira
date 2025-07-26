@@ -175,6 +175,6 @@ export const tabs = [
   { id: 'subjects', label: 'Disciplinas', icon: BookOpen },
   { id: 'classes', label: 'Turmas', icon: GraduationCap },
   { id: 'enrollments', label: 'Matrículas', icon: UserPlus },
-  { id: 'criteria', label: 'Critérios', icon: Award },
+  { id: 'transactionRules', label: 'Regras de Transações', icon: Award },
   { id: 'settings', label: 'Configurações', icon: Settings },
 ];

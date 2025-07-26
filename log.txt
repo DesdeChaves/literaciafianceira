@@ -1,20 +1,2479 @@
-
-> valcoin-admin@0.1.0 start
-> react-scripts start
-
-(node:2618) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
-(Use `node --trace-deprecation ...` to show where the warning was created)
-(node:2618) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
-Starting the development server...
-
-Compiled successfully!
-
-You can now view valcoin-admin in the browser.
-
-  Local:            http://localhost:3000
-  On Your Network:  http://192.168.1.226:3000
-
-Note that the development build is not optimized.
-To create a production build, use npm run build.
-
-webpack compiled successfully
+Server is running on http://localhost:3001
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+Received transaction data: {
+  utilizador_origem_id: '7cf5731b-44b2-48ad-a3e9-4d65c896ad86',
+  utilizador_destino_id: 'c285f0d7-3330-4bea-9205-30e367953aaf',
+  montante: 3,
+  tipo: 'CREDITO',
+  descricao: 'fog',
+  status: 'PENDENTE'
+}
+=== TRANSACTION VALIDATION DEBUG ===
+Received transaction data: {
+  "utilizador_origem_id": "7cf5731b-44b2-48ad-a3e9-4d65c896ad86",
+  "utilizador_destino_id": "c285f0d7-3330-4bea-9205-30e367953aaf",
+  "montante": 3,
+  "tipo": "CREDITO",
+  "descricao": "fog",
+  "status": "PENDENTE"
+}
+Available users: [
+  {
+    id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    idType: 'string',
+    nome: 'João Silva',
+    ativo: true
+  },
+  {
+    id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    idType: 'string',
+    nome: 'Maria Santos',
+    ativo: true
+  },
+  {
+    id: '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
+    idType: 'string',
+    nome: 'Ana Costa',
+    ativo: true
+  },
+  {
+    id: '4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a',
+    idType: 'string',
+    nome: 'Pedro Almeida',
+    ativo: true
+  }
+]
+Origem ID: 7cf5731b-44b2-48ad-a3e9-4d65c896ad86 Type: string
+Destino ID: c285f0d7-3330-4bea-9205-30e367953aaf Type: string
+Found origem user: NOT FOUND
+Found destino user: NOT FOUND
+ORIGEM USER NOT FOUND - Available IDs: [
+  '"1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b"',
+  '"2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"',
+  '"3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f"',
+  '"4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a"'
+]
+DESTINO USER NOT FOUND - Available IDs: [
+  '"1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b"',
+  '"2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"',
+  '"3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f"',
+  '"4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a"'
+]
+Validation errors: [
+  'Utilizador origem não encontrado',
+  'Utilizador destino não encontrado'
+]
+=== END VALIDATION DEBUG ===
+Validation errors: [
+  'Utilizador origem não encontrado',
+  'Utilizador destino não encontrado'
+]
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+Received transaction data: {
+  utilizador_origem_id: 'd3cfc700-de18-47c0-931b-46d1315925b7',
+  utilizador_destino_id: 'd1e7fb4f-3353-42ab-8fb5-33b6a0234acc',
+  montante: 2,
+  tipo: 'CREDITO',
+  descricao: 'kjhkh',
+  status: 'PENDENTE'
+}
+=== TRANSACTION VALIDATION DEBUG ===
+Received transaction data: {
+  "utilizador_origem_id": "d3cfc700-de18-47c0-931b-46d1315925b7",
+  "utilizador_destino_id": "d1e7fb4f-3353-42ab-8fb5-33b6a0234acc",
+  "montante": 2,
+  "tipo": "CREDITO",
+  "descricao": "kjhkh",
+  "status": "PENDENTE"
+}
+Available users: [
+  {
+    id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    idType: 'string',
+    nome: 'João Silva',
+    ativo: true
+  },
+  {
+    id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    idType: 'string',
+    nome: 'Maria Santos',
+    ativo: true
+  },
+  {
+    id: '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
+    idType: 'string',
+    nome: 'Ana Costa',
+    ativo: true
+  },
+  {
+    id: '4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a',
+    idType: 'string',
+    nome: 'Pedro Almeida',
+    ativo: true
+  }
+]
+Origem ID: d3cfc700-de18-47c0-931b-46d1315925b7 Type: string
+Destino ID: d1e7fb4f-3353-42ab-8fb5-33b6a0234acc Type: string
+Found origem user: NOT FOUND
+Found destino user: NOT FOUND
+ORIGEM USER NOT FOUND - Available IDs: [
+  '"1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b"',
+  '"2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"',
+  '"3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f"',
+  '"4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a"'
+]
+DESTINO USER NOT FOUND - Available IDs: [
+  '"1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b"',
+  '"2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"',
+  '"3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f"',
+  '"4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a"'
+]
+Validation errors: [
+  'Utilizador origem não encontrado',
+  'Utilizador destino não encontrado'
+]
+=== END VALIDATION DEBUG ===
+Validation errors: [
+  'Utilizador origem não encontrado',
+  'Utilizador destino não encontrado'
+]
+Received transaction data: {
+  utilizador_origem_id: 'd3cfc700-de18-47c0-931b-46d1315925b7',
+  utilizador_destino_id: 'd1e7fb4f-3353-42ab-8fb5-33b6a0234acc',
+  montante: 4,
+  tipo: 'CREDITO',
+  descricao: 'kjhhk',
+  status: 'PENDENTE'
+}
+=== TRANSACTION VALIDATION DEBUG ===
+Received transaction data: {
+  "utilizador_origem_id": "d3cfc700-de18-47c0-931b-46d1315925b7",
+  "utilizador_destino_id": "d1e7fb4f-3353-42ab-8fb5-33b6a0234acc",
+  "montante": 4,
+  "tipo": "CREDITO",
+  "descricao": "kjhhk",
+  "status": "PENDENTE"
+}
+Available users: [
+  {
+    id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    idType: 'string',
+    nome: 'João Silva',
+    ativo: true
+  },
+  {
+    id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    idType: 'string',
+    nome: 'Maria Santos',
+    ativo: true
+  },
+  {
+    id: '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
+    idType: 'string',
+    nome: 'Ana Costa',
+    ativo: true
+  },
+  {
+    id: '4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a',
+    idType: 'string',
+    nome: 'Pedro Almeida',
+    ativo: true
+  }
+]
+Origem ID: d3cfc700-de18-47c0-931b-46d1315925b7 Type: string
+Destino ID: d1e7fb4f-3353-42ab-8fb5-33b6a0234acc Type: string
+Found origem user: NOT FOUND
+Found destino user: NOT FOUND
+ORIGEM USER NOT FOUND - Available IDs: [
+  '"1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b"',
+  '"2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"',
+  '"3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f"',
+  '"4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a"'
+]
+DESTINO USER NOT FOUND - Available IDs: [
+  '"1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b"',
+  '"2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"',
+  '"3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f"',
+  '"4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a"'
+]
+Validation errors: [
+  'Utilizador origem não encontrado',
+  'Utilizador destino não encontrado'
+]
+=== END VALIDATION DEBUG ===
+Validation errors: [
+  'Utilizador origem não encontrado',
+  'Utilizador destino não encontrado'
+]
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+Received transaction data: {
+  utilizador_origem_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+  utilizador_destino_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+  montante: 4,
+  tipo: 'CREDITO',
+  descricao: 'text',
+  status: 'PENDENTE'
+}
+=== TRANSACTION VALIDATION DEBUG ===
+Received transaction data: {
+  "utilizador_origem_id": "1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b",
+  "utilizador_destino_id": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+  "montante": 4,
+  "tipo": "CREDITO",
+  "descricao": "text",
+  "status": "PENDENTE"
+}
+Available users: [
+  {
+    id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    idType: 'string',
+    nome: 'João Silva',
+    ativo: true
+  },
+  {
+    id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    idType: 'string',
+    nome: 'Maria Santos',
+    ativo: true
+  },
+  {
+    id: '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
+    idType: 'string',
+    nome: 'Ana Costa',
+    ativo: true
+  },
+  {
+    id: '4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a',
+    idType: 'string',
+    nome: 'Pedro Almeida',
+    ativo: true
+  }
+]
+Origem ID: 1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b Type: string
+Destino ID: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e Type: string
+Found origem user: { id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b', nome: 'João Silva' }
+Found destino user: { id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e', nome: 'Maria Santos' }
+Validation errors: []
+=== END VALIDATION DEBUG ===
+Created transactions: [
+  {
+    id: '1753367386903.5857',
+    data_transacao: '2025-07-24T14:29:46.903Z',
+    status: 'PENDENTE',
+    utilizador_origem_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    utilizador_destino_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    montante: 4,
+    tipo: 'CREDITO',
+    descricao: 'text',
+    utilizador_origem_nome: 'João Silva',
+    utilizador_destino_nome: 'Maria Santos'
+  },
+  {
+    id: '1753367386903.724',
+    utilizador_origem_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    utilizador_destino_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    montante: 4,
+    tipo: 'DEBITO',
+    status: 'PENDENTE',
+    data_transacao: '2025-07-24T14:29:46.903Z',
+    descricao: '[Contrapartida] text',
+    utilizador_origem_nome: 'Maria Santos',
+    utilizador_destino_nome: 'João Silva'
+  }
+]
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+Received transaction data: {
+  utilizador_origem_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+  utilizador_destino_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+  montante: 6,
+  tipo: 'CREDITO',
+  descricao: 'sfsdf',
+  status: 'PENDENTE'
+}
+=== TRANSACTION VALIDATION DEBUG ===
+Received transaction data: {
+  "utilizador_origem_id": "1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b",
+  "utilizador_destino_id": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+  "montante": 6,
+  "tipo": "CREDITO",
+  "descricao": "sfsdf",
+  "status": "PENDENTE"
+}
+Available users: [
+  {
+    id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    idType: 'string',
+    nome: 'João Silva',
+    ativo: true
+  },
+  {
+    id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    idType: 'string',
+    nome: 'Maria Santos',
+    ativo: true
+  },
+  {
+    id: '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
+    idType: 'string',
+    nome: 'Ana Costa',
+    ativo: true
+  },
+  {
+    id: '4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a',
+    idType: 'string',
+    nome: 'Pedro Almeida',
+    ativo: true
+  }
+]
+Origem ID: 1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b Type: string
+Destino ID: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e Type: string
+Found origem user: { id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b', nome: 'João Silva' }
+Found destino user: { id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e', nome: 'Maria Santos' }
+Validation errors: []
+=== END VALIDATION DEBUG ===
+Created transactions: [
+  {
+    id: '1753367804708.8987',
+    data_transacao: '2025-07-24T14:36:44.709Z',
+    status: 'PENDENTE',
+    utilizador_origem_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    utilizador_destino_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    montante: 6,
+    tipo: 'CREDITO',
+    descricao: 'sfsdf',
+    utilizador_origem_nome: 'João Silva',
+    utilizador_destino_nome: 'Maria Santos'
+  },
+  {
+    id: '1753367804709.5747',
+    utilizador_origem_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    utilizador_destino_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    montante: 6,
+    tipo: 'DEBITO',
+    status: 'PENDENTE',
+    data_transacao: '2025-07-24T14:36:44.709Z',
+    descricao: '[Contrapartida] sfsdf',
+    utilizador_origem_nome: 'Maria Santos',
+    utilizador_destino_nome: 'João Silva'
+  }
+]
+Received transaction data: {
+  utilizador_origem_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+  utilizador_destino_id: '4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a',
+  montante: 4,
+  tipo: 'DEBITO',
+  descricao: 'sdfsdf',
+  status: 'PENDENTE'
+}
+=== TRANSACTION VALIDATION DEBUG ===
+Received transaction data: {
+  "utilizador_origem_id": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+  "utilizador_destino_id": "4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a",
+  "montante": 4,
+  "tipo": "DEBITO",
+  "descricao": "sdfsdf",
+  "status": "PENDENTE"
+}
+Available users: [
+  {
+    id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    idType: 'string',
+    nome: 'João Silva',
+    ativo: true
+  },
+  {
+    id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    idType: 'string',
+    nome: 'Maria Santos',
+    ativo: true
+  },
+  {
+    id: '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
+    idType: 'string',
+    nome: 'Ana Costa',
+    ativo: true
+  },
+  {
+    id: '4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a',
+    idType: 'string',
+    nome: 'Pedro Almeida',
+    ativo: true
+  }
+]
+Origem ID: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e Type: string
+Destino ID: 4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a Type: string
+Found origem user: { id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e', nome: 'Maria Santos' }
+Found destino user: { id: '4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a', nome: 'Pedro Almeida' }
+Validation errors: []
+=== END VALIDATION DEBUG ===
+Created transactions: [
+  {
+    id: '1753367973957.8823',
+    data_transacao: '2025-07-24T14:39:33.957Z',
+    status: 'PENDENTE',
+    utilizador_origem_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    utilizador_destino_id: '4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a',
+    montante: 4,
+    tipo: 'DEBITO',
+    descricao: 'sdfsdf',
+    utilizador_origem_nome: 'Maria Santos',
+    utilizador_destino_nome: 'Pedro Almeida'
+  },
+  {
+    id: '1753367973957.1658',
+    utilizador_origem_id: '4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a',
+    utilizador_destino_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    montante: 4,
+    tipo: 'CREDITO',
+    status: 'PENDENTE',
+    data_transacao: '2025-07-24T14:39:33.957Z',
+    descricao: '[Contrapartida] sdfsdf',
+    utilizador_origem_nome: 'Pedro Almeida',
+    utilizador_destino_nome: 'Maria Santos'
+  }
+]
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+Received transaction data: {
+  utilizador_origem_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+  utilizador_destino_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+  montante: 3.99,
+  tipo: 'CREDITO',
+  descricao: 'dfgdfg',
+  status: 'PENDENTE'
+}
+=== TRANSACTION VALIDATION DEBUG ===
+Received transaction data: {
+  "utilizador_origem_id": "1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b",
+  "utilizador_destino_id": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+  "montante": 3.99,
+  "tipo": "CREDITO",
+  "descricao": "dfgdfg",
+  "status": "PENDENTE"
+}
+Available users: [
+  {
+    id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    idType: 'string',
+    nome: 'João Silva',
+    ativo: true
+  },
+  {
+    id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    idType: 'string',
+    nome: 'Maria Santos',
+    ativo: true
+  },
+  {
+    id: '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
+    idType: 'string',
+    nome: 'Ana Costa',
+    ativo: true
+  },
+  {
+    id: '4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a',
+    idType: 'string',
+    nome: 'Pedro Almeida',
+    ativo: true
+  }
+]
+Origem ID: 1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b Type: string
+Destino ID: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e Type: string
+Found origem user: { id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b', nome: 'João Silva' }
+Found destino user: { id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e', nome: 'Maria Santos' }
+Validation errors: []
+=== END VALIDATION DEBUG ===
+Created transactions: [
+  {
+    id: '1753368027806.1262',
+    data_transacao: '2025-07-24T14:40:27.806Z',
+    status: 'PENDENTE',
+    utilizador_origem_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    utilizador_destino_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    montante: 3.99,
+    tipo: 'CREDITO',
+    descricao: 'dfgdfg',
+    utilizador_origem_nome: 'João Silva',
+    utilizador_destino_nome: 'Maria Santos'
+  },
+  {
+    id: '1753368027806.0117',
+    utilizador_origem_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    utilizador_destino_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    montante: 3.99,
+    tipo: 'DEBITO',
+    status: 'PENDENTE',
+    data_transacao: '2025-07-24T14:40:27.806Z',
+    descricao: '[Contrapartida] dfgdfg',
+    utilizador_origem_nome: 'Maria Santos',
+    utilizador_destino_nome: 'João Silva'
+  }
+]
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+Received transaction data: {
+  utilizador_origem_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+  utilizador_destino_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+  montante: 6,
+  tipo: 'CREDITO',
+  descricao: 'khaki',
+  status: 'PENDENTE'
+}
+=== TRANSACTION VALIDATION DEBUG ===
+Received transaction data: {
+  "utilizador_origem_id": "1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b",
+  "utilizador_destino_id": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+  "montante": 6,
+  "tipo": "CREDITO",
+  "descricao": "khaki",
+  "status": "PENDENTE"
+}
+Available users: [
+  {
+    id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    idType: 'string',
+    nome: 'João Silva',
+    ativo: true
+  },
+  {
+    id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    idType: 'string',
+    nome: 'Maria Santos',
+    ativo: true
+  },
+  {
+    id: '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
+    idType: 'string',
+    nome: 'Ana Costa',
+    ativo: true
+  },
+  {
+    id: '4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a',
+    idType: 'string',
+    nome: 'Pedro Almeida',
+    ativo: true
+  }
+]
+Origem ID: 1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b Type: string
+Destino ID: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e Type: string
+Found origem user: { id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b', nome: 'João Silva' }
+Found destino user: { id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e', nome: 'Maria Santos' }
+Validation errors: []
+=== END VALIDATION DEBUG ===
+Created transactions: [
+  {
+    id: '1753368835891.0847',
+    data_transacao: '2025-07-24T14:53:55.892Z',
+    status: 'PENDENTE',
+    utilizador_origem_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    utilizador_destino_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    montante: 6,
+    tipo: 'CREDITO',
+    descricao: 'khaki',
+    utilizador_origem_nome: 'João Silva',
+    utilizador_destino_nome: 'Maria Santos'
+  },
+  {
+    id: '1753368835892.5642',
+    utilizador_origem_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    utilizador_destino_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    montante: 6,
+    tipo: 'DEBITO',
+    status: 'PENDENTE',
+    data_transacao: '2025-07-24T14:53:55.892Z',
+    descricao: '[Contrapartida] khaki',
+    utilizador_origem_nome: 'Maria Santos',
+    utilizador_destino_nome: 'João Silva'
+  }
+]
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+Received transaction data: {
+  utilizador_origem_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+  utilizador_destino_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+  montante: 2,
+  tipo: 'CREDITO',
+  descricao: 'fsdf',
+  status: 'PENDENTE'
+}
+=== TRANSACTION VALIDATION DEBUG ===
+Received transaction data: {
+  "utilizador_origem_id": "1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b",
+  "utilizador_destino_id": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+  "montante": 2,
+  "tipo": "CREDITO",
+  "descricao": "fsdf",
+  "status": "PENDENTE"
+}
+Available users: [
+  {
+    id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    idType: 'string',
+    nome: 'João Silva',
+    ativo: true
+  },
+  {
+    id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    idType: 'string',
+    nome: 'Maria Santos',
+    ativo: true
+  },
+  {
+    id: '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
+    idType: 'string',
+    nome: 'Ana Costa',
+    ativo: true
+  },
+  {
+    id: '4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a',
+    idType: 'string',
+    nome: 'Pedro Almeida',
+    ativo: true
+  }
+]
+Origem ID: 1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b Type: string
+Destino ID: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e Type: string
+Found origem user: { id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b', nome: 'João Silva' }
+Found destino user: { id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e', nome: 'Maria Santos' }
+Validation errors: []
+=== END VALIDATION DEBUG ===
+Created transactions: [
+  {
+    id: '1753389793335.872',
+    data_transacao: '2025-07-24T20:43:13.335Z',
+    status: 'PENDENTE',
+    utilizador_origem_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    utilizador_destino_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    montante: 2,
+    tipo: 'CREDITO',
+    descricao: 'fsdf',
+    utilizador_origem_nome: 'João Silva',
+    utilizador_destino_nome: 'Maria Santos'
+  },
+  {
+    id: '1753389793335.4668',
+    utilizador_origem_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    utilizador_destino_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    montante: 2,
+    tipo: 'DEBITO',
+    status: 'PENDENTE',
+    data_transacao: '2025-07-24T20:43:13.335Z',
+    descricao: '[Contrapartida] fsdf',
+    utilizador_origem_nome: 'Maria Santos',
+    utilizador_destino_nome: 'João Silva'
+  }
+]
+=== TRANSACTION VALIDATION DEBUG ===
+Received transaction data: {
+  "utilizador_origem_id": "1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b",
+  "utilizador_destino_id": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+  "montante": 2,
+  "tipo": "CREDITO",
+  "descricao": "fsdf",
+  "status": "APROVADA"
+}
+Available users: [
+  {
+    id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    idType: 'string',
+    nome: 'João Silva',
+    ativo: true
+  },
+  {
+    id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    idType: 'string',
+    nome: 'Maria Santos',
+    ativo: true
+  },
+  {
+    id: '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
+    idType: 'string',
+    nome: 'Ana Costa',
+    ativo: true
+  },
+  {
+    id: '4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a',
+    idType: 'string',
+    nome: 'Pedro Almeida',
+    ativo: true
+  }
+]
+Origem ID: 1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b Type: string
+Destino ID: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e Type: string
+Found origem user: { id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b', nome: 'João Silva' }
+Found destino user: { id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e', nome: 'Maria Santos' }
+Validation errors: []
+=== END VALIDATION DEBUG ===
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+Received transaction data: {
+  utilizador_origem_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+  utilizador_destino_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+  montante: 4,
+  tipo: 'CREDITO',
+  descricao: 'dfgdf',
+  status: 'PENDENTE'
+}
+=== TRANSACTION VALIDATION DEBUG ===
+Received transaction data: {
+  "utilizador_origem_id": "1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b",
+  "utilizador_destino_id": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+  "montante": 4,
+  "tipo": "CREDITO",
+  "descricao": "dfgdf",
+  "status": "PENDENTE"
+}
+Available users: [
+  {
+    id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    idType: 'string',
+    nome: 'João Silva',
+    ativo: true
+  },
+  {
+    id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    idType: 'string',
+    nome: 'Maria Santos',
+    ativo: true
+  },
+  {
+    id: '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
+    idType: 'string',
+    nome: 'Ana Costa',
+    ativo: true
+  },
+  {
+    id: '4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a',
+    idType: 'string',
+    nome: 'Pedro Almeida',
+    ativo: true
+  }
+]
+Origem ID: 1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b Type: string
+Destino ID: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e Type: string
+Found origem user: { id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b', nome: 'João Silva' }
+Found destino user: { id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e', nome: 'Maria Santos' }
+Validation errors: []
+=== END VALIDATION DEBUG ===
+Created transactions: [
+  {
+    id: '1753430288338.3997',
+    data_transacao: '2025-07-25T07:58:08.338Z',
+    status: 'PENDENTE',
+    utilizador_origem_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    utilizador_destino_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    montante: 4,
+    tipo: 'CREDITO',
+    descricao: 'dfgdf',
+    utilizador_origem_nome: 'João Silva',
+    utilizador_destino_nome: 'Maria Santos'
+  },
+  {
+    id: '1753430288338.5854',
+    utilizador_origem_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    utilizador_destino_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    montante: 4,
+    tipo: 'DEBITO',
+    status: 'PENDENTE',
+    data_transacao: '2025-07-25T07:58:08.338Z',
+    descricao: '[Contrapartida] dfgdf',
+    utilizador_origem_nome: 'Maria Santos',
+    utilizador_destino_nome: 'João Silva'
+  }
+]
+=== TRANSACTION VALIDATION DEBUG ===
+Received transaction data: {
+  "utilizador_origem_id": "1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b",
+  "utilizador_destino_id": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+  "montante": 4,
+  "tipo": "CREDITO",
+  "descricao": "dfgdf",
+  "status": "APROVADA"
+}
+Available users: [
+  {
+    id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    idType: 'string',
+    nome: 'João Silva',
+    ativo: true
+  },
+  {
+    id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    idType: 'string',
+    nome: 'Maria Santos',
+    ativo: true
+  },
+  {
+    id: '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
+    idType: 'string',
+    nome: 'Ana Costa',
+    ativo: true
+  },
+  {
+    id: '4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a',
+    idType: 'string',
+    nome: 'Pedro Almeida',
+    ativo: true
+  }
+]
+Origem ID: 1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b Type: string
+Destino ID: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e Type: string
+Found origem user: { id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b', nome: 'João Silva' }
+Found destino user: { id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e', nome: 'Maria Santos' }
+Validation errors: []
+=== END VALIDATION DEBUG ===
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+Received transaction data: {
+  utilizador_origem_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+  utilizador_destino_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+  montante: 5,
+  tipo: 'CREDITO',
+  descricao: 'sdfsdf',
+  status: 'PENDENTE'
+}
+=== TRANSACTION VALIDATION DEBUG ===
+Received transaction data: {
+  "utilizador_origem_id": "1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b",
+  "utilizador_destino_id": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+  "montante": 5,
+  "tipo": "CREDITO",
+  "descricao": "sdfsdf",
+  "status": "PENDENTE"
+}
+Available users: [
+  {
+    id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    idType: 'string',
+    nome: 'João Silva',
+    ativo: true
+  },
+  {
+    id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    idType: 'string',
+    nome: 'Maria Santos',
+    ativo: true
+  },
+  {
+    id: '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
+    idType: 'string',
+    nome: 'Ana Costa',
+    ativo: true
+  },
+  {
+    id: '4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a',
+    idType: 'string',
+    nome: 'Pedro Almeida',
+    ativo: true
+  }
+]
+Origem ID: 1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b Type: string
+Destino ID: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e Type: string
+Found origem user: { id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b', nome: 'João Silva' }
+Found destino user: { id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e', nome: 'Maria Santos' }
+Validation errors: []
+=== END VALIDATION DEBUG ===
+Created transactions: [
+  {
+    id: '1753431330394.4595',
+    data_transacao: '2025-07-25T08:15:30.394Z',
+    status: 'PENDENTE',
+    utilizador_origem_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    utilizador_destino_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    montante: 5,
+    tipo: 'CREDITO',
+    descricao: 'sdfsdf',
+    utilizador_origem_nome: 'João Silva',
+    utilizador_destino_nome: 'Maria Santos'
+  },
+  {
+    id: '1753431330394.6338',
+    utilizador_origem_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    utilizador_destino_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    montante: 5,
+    tipo: 'DEBITO',
+    status: 'PENDENTE',
+    data_transacao: '2025-07-25T08:15:30.394Z',
+    descricao: '[Contrapartida] sdfsdf',
+    utilizador_origem_nome: 'Maria Santos',
+    utilizador_destino_nome: 'João Silva'
+  }
+]
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+Received transaction data: {
+  utilizador_origem_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+  utilizador_destino_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+  montante: 6,
+  tipo: 'CREDITO',
+  descricao: 'jgjh',
+  status: 'PENDENTE'
+}
+=== TRANSACTION VALIDATION DEBUG ===
+Received transaction data: {
+  "utilizador_origem_id": "1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b",
+  "utilizador_destino_id": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+  "montante": 6,
+  "tipo": "CREDITO",
+  "descricao": "jgjh",
+  "status": "PENDENTE"
+}
+Available users: [
+  {
+    id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    idType: 'string',
+    nome: 'João Silva',
+    ativo: true
+  },
+  {
+    id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    idType: 'string',
+    nome: 'Maria Santos',
+    ativo: true
+  },
+  {
+    id: '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
+    idType: 'string',
+    nome: 'Ana Costa',
+    ativo: true
+  },
+  {
+    id: '4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a',
+    idType: 'string',
+    nome: 'Pedro Almeida',
+    ativo: true
+  }
+]
+Origem ID: 1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b Type: string
+Destino ID: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e Type: string
+Found origem user: { id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b', nome: 'João Silva' }
+Found destino user: { id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e', nome: 'Maria Santos' }
+Validation errors: []
+=== END VALIDATION DEBUG ===
+Created transactions: [
+  {
+    id: '1753431830371.9763',
+    data_transacao: '2025-07-25T08:23:50.371Z',
+    status: 'PENDENTE',
+    utilizador_origem_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    utilizador_destino_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    montante: 6,
+    tipo: 'CREDITO',
+    descricao: 'jgjh',
+    utilizador_origem_nome: 'João Silva',
+    utilizador_destino_nome: 'Maria Santos'
+  },
+  {
+    id: '1753431830371.2686',
+    utilizador_origem_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    utilizador_destino_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    montante: 6,
+    tipo: 'DEBITO',
+    status: 'PENDENTE',
+    data_transacao: '2025-07-25T08:23:50.371Z',
+    descricao: '[Contrapartida] jgjh',
+    utilizador_origem_nome: 'Maria Santos',
+    utilizador_destino_nome: 'João Silva'
+  }
+]
+=== TRANSACTION VALIDATION DEBUG ===
+Received transaction data: {
+  "utilizador_origem_id": "1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b",
+  "utilizador_destino_id": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+  "montante": 6,
+  "tipo": "DEBITO",
+  "descricao": "jgjh",
+  "status": "PENDENTE"
+}
+Available users: [
+  {
+    id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    idType: 'string',
+    nome: 'João Silva',
+    ativo: true
+  },
+  {
+    id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    idType: 'string',
+    nome: 'Maria Santos',
+    ativo: true
+  },
+  {
+    id: '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
+    idType: 'string',
+    nome: 'Ana Costa',
+    ativo: true
+  },
+  {
+    id: '4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a',
+    idType: 'string',
+    nome: 'Pedro Almeida',
+    ativo: true
+  }
+]
+Origem ID: 1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b Type: string
+Destino ID: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e Type: string
+Found origem user: { id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b', nome: 'João Silva' }
+Found destino user: { id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e', nome: 'Maria Santos' }
+Validation errors: []
+=== END VALIDATION DEBUG ===
+=== TRANSACTION VALIDATION DEBUG ===
+Received transaction data: {
+  "utilizador_origem_id": "1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b",
+  "utilizador_destino_id": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+  "montante": 6,
+  "tipo": "DEBITO",
+  "descricao": "jgjh",
+  "status": "PENDENTE"
+}
+Available users: [
+  {
+    id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    idType: 'string',
+    nome: 'João Silva',
+    ativo: true
+  },
+  {
+    id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    idType: 'string',
+    nome: 'Maria Santos',
+    ativo: true
+  },
+  {
+    id: '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
+    idType: 'string',
+    nome: 'Ana Costa',
+    ativo: true
+  },
+  {
+    id: '4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a',
+    idType: 'string',
+    nome: 'Pedro Almeida',
+    ativo: true
+  }
+]
+Origem ID: 1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b Type: string
+Destino ID: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e Type: string
+Found origem user: { id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b', nome: 'João Silva' }
+Found destino user: { id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e', nome: 'Maria Santos' }
+Validation errors: []
+=== END VALIDATION DEBUG ===
+=== TRANSACTION VALIDATION DEBUG ===
+Received transaction data: {
+  "utilizador_origem_id": "1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b",
+  "utilizador_destino_id": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+  "montante": 6,
+  "tipo": "DEBITO",
+  "descricao": "jgjh",
+  "status": "APROVADA"
+}
+Available users: [
+  {
+    id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    idType: 'string',
+    nome: 'João Silva',
+    ativo: true
+  },
+  {
+    id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    idType: 'string',
+    nome: 'Maria Santos',
+    ativo: true
+  },
+  {
+    id: '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
+    idType: 'string',
+    nome: 'Ana Costa',
+    ativo: true
+  },
+  {
+    id: '4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a',
+    idType: 'string',
+    nome: 'Pedro Almeida',
+    ativo: true
+  }
+]
+Origem ID: 1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b Type: string
+Destino ID: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e Type: string
+Found origem user: { id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b', nome: 'João Silva' }
+Found destino user: { id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e', nome: 'Maria Santos' }
+Validation errors: []
+=== END VALIDATION DEBUG ===
+Received transaction data: {
+  utilizador_origem_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+  utilizador_destino_id: '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
+  montante: 5,
+  tipo: 'CREDITO',
+  descricao: 'dgfgdfg',
+  status: 'PENDENTE'
+}
+=== TRANSACTION VALIDATION DEBUG ===
+Received transaction data: {
+  "utilizador_origem_id": "1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b",
+  "utilizador_destino_id": "3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
+  "montante": 5,
+  "tipo": "CREDITO",
+  "descricao": "dgfgdfg",
+  "status": "PENDENTE"
+}
+Available users: [
+  {
+    id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    idType: 'string',
+    nome: 'João Silva',
+    ativo: true
+  },
+  {
+    id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    idType: 'string',
+    nome: 'Maria Santos',
+    ativo: true
+  },
+  {
+    id: '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
+    idType: 'string',
+    nome: 'Ana Costa',
+    ativo: true
+  },
+  {
+    id: '4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a',
+    idType: 'string',
+    nome: 'Pedro Almeida',
+    ativo: true
+  }
+]
+Origem ID: 1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b Type: string
+Destino ID: 3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f Type: string
+Found origem user: { id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b', nome: 'João Silva' }
+Found destino user: { id: '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f', nome: 'Ana Costa' }
+Validation errors: []
+=== END VALIDATION DEBUG ===
+Created transactions: [
+  {
+    id: '1753432005057.8052',
+    data_transacao: '2025-07-25T08:26:45.057Z',
+    status: 'PENDENTE',
+    utilizador_origem_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    utilizador_destino_id: '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
+    montante: 5,
+    tipo: 'CREDITO',
+    descricao: 'dgfgdfg',
+    utilizador_origem_nome: 'João Silva',
+    utilizador_destino_nome: 'Ana Costa'
+  },
+  {
+    id: '1753432005057.5198',
+    utilizador_origem_id: '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
+    utilizador_destino_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    montante: 5,
+    tipo: 'DEBITO',
+    status: 'PENDENTE',
+    data_transacao: '2025-07-25T08:26:45.057Z',
+    descricao: '[Contrapartida] dgfgdfg',
+    utilizador_origem_nome: 'Ana Costa',
+    utilizador_destino_nome: 'João Silva'
+  }
+]
+=== TRANSACTION VALIDATION DEBUG ===
+Received transaction data: {
+  "utilizador_origem_id": "1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b",
+  "utilizador_destino_id": "3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
+  "montante": 5,
+  "tipo": "CREDITO",
+  "descricao": "dgfgdfg",
+  "status": "APROVADA"
+}
+Available users: [
+  {
+    id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    idType: 'string',
+    nome: 'João Silva',
+    ativo: true
+  },
+  {
+    id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    idType: 'string',
+    nome: 'Maria Santos',
+    ativo: true
+  },
+  {
+    id: '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
+    idType: 'string',
+    nome: 'Ana Costa',
+    ativo: true
+  },
+  {
+    id: '4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a',
+    idType: 'string',
+    nome: 'Pedro Almeida',
+    ativo: true
+  }
+]
+Origem ID: 1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b Type: string
+Destino ID: 3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f Type: string
+Found origem user: { id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b', nome: 'João Silva' }
+Found destino user: { id: '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f', nome: 'Ana Costa' }
+Validation errors: []
+=== END VALIDATION DEBUG ===
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+Received transaction data: {
+  utilizador_origem_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+  utilizador_destino_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+  montante: 4,
+  tipo: 'CREDITO',
+  descricao: 'fdgdf',
+  status: 'PENDENTE'
+}
+=== TRANSACTION VALIDATION DEBUG ===
+Received transaction data: {
+  "utilizador_origem_id": "1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b",
+  "utilizador_destino_id": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+  "montante": 4,
+  "tipo": "CREDITO",
+  "descricao": "fdgdf",
+  "status": "PENDENTE"
+}
+Available users: [
+  {
+    id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    idType: 'string',
+    nome: 'João Silva',
+    ativo: true
+  },
+  {
+    id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    idType: 'string',
+    nome: 'Maria Santos',
+    ativo: true
+  },
+  {
+    id: '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
+    idType: 'string',
+    nome: 'Ana Costa',
+    ativo: true
+  },
+  {
+    id: '4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a',
+    idType: 'string',
+    nome: 'Pedro Almeida',
+    ativo: true
+  }
+]
+Origem ID: 1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b Type: string
+Destino ID: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e Type: string
+Found origem user: { id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b', nome: 'João Silva' }
+Found destino user: { id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e', nome: 'Maria Santos' }
+Validation errors: []
+=== END VALIDATION DEBUG ===
+Created transactions: [
+  {
+    id: '1753440681450.777',
+    data_transacao: '2025-07-25T10:51:21.450Z',
+    status: 'PENDENTE',
+    utilizador_origem_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    utilizador_destino_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    montante: 4,
+    tipo: 'CREDITO',
+    descricao: 'fdgdf',
+    utilizador_origem_nome: 'João Silva',
+    utilizador_destino_nome: 'Maria Santos'
+  },
+  {
+    id: '1753440681450.3325',
+    utilizador_origem_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    utilizador_destino_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    montante: 4,
+    tipo: 'DEBITO',
+    status: 'PENDENTE',
+    data_transacao: '2025-07-25T10:51:21.450Z',
+    descricao: '[Contrapartida] fdgdf',
+    utilizador_origem_nome: 'Maria Santos',
+    utilizador_destino_nome: 'João Silva'
+  }
+]
+=== TRANSACTION VALIDATION DEBUG ===
+Received transaction data: {
+  "utilizador_origem_id": "1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b",
+  "utilizador_destino_id": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+  "montante": 4,
+  "tipo": "CREDITO",
+  "descricao": "fdgdf",
+  "status": "APROVADA"
+}
+Available users: [
+  {
+    id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    idType: 'string',
+    nome: 'João Silva',
+    ativo: true
+  },
+  {
+    id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    idType: 'string',
+    nome: 'Maria Santos',
+    ativo: true
+  },
+  {
+    id: '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
+    idType: 'string',
+    nome: 'Ana Costa',
+    ativo: true
+  },
+  {
+    id: '4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a',
+    idType: 'string',
+    nome: 'Pedro Almeida',
+    ativo: true
+  }
+]
+Origem ID: 1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b Type: string
+Destino ID: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e Type: string
+Found origem user: { id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b', nome: 'João Silva' }
+Found destino user: { id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e', nome: 'Maria Santos' }
+Validation errors: []
+=== END VALIDATION DEBUG ===
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+Received transaction data: {
+  utilizador_origem_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+  utilizador_destino_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+  montante: 4,
+  tipo: 'CREDITO',
+  descricao: 'fgdfg',
+  status: 'PENDENTE'
+}
+=== TRANSACTION VALIDATION DEBUG ===
+Received transaction data: {
+  "utilizador_origem_id": "1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b",
+  "utilizador_destino_id": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+  "montante": 4,
+  "tipo": "CREDITO",
+  "descricao": "fgdfg",
+  "status": "PENDENTE"
+}
+Available users: [
+  {
+    id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    idType: 'string',
+    nome: 'João Silva',
+    ativo: true
+  },
+  {
+    id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    idType: 'string',
+    nome: 'Maria Santos',
+    ativo: true
+  },
+  {
+    id: '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
+    idType: 'string',
+    nome: 'Ana Costa',
+    ativo: true
+  },
+  {
+    id: '4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a',
+    idType: 'string',
+    nome: 'Pedro Almeida',
+    ativo: true
+  }
+]
+Origem ID: 1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b Type: string
+Destino ID: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e Type: string
+Found origem user: { id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b', nome: 'João Silva' }
+Found destino user: { id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e', nome: 'Maria Santos' }
+Validation errors: []
+=== END VALIDATION DEBUG ===
+Created transactions: [
+  {
+    id: '1753440844186.212',
+    data_transacao: '2025-07-25T10:54:04.186Z',
+    status: 'PENDENTE',
+    utilizador_origem_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    utilizador_destino_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    montante: 4,
+    tipo: 'CREDITO',
+    descricao: 'fgdfg',
+    utilizador_origem_nome: 'João Silva',
+    utilizador_destino_nome: 'Maria Santos'
+  },
+  {
+    id: '1753440844186.4602',
+    utilizador_origem_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    utilizador_destino_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    montante: 4,
+    tipo: 'DEBITO',
+    status: 'PENDENTE',
+    data_transacao: '2025-07-25T10:54:04.186Z',
+    descricao: '[Contrapartida] fgdfg',
+    utilizador_origem_nome: 'Maria Santos',
+    utilizador_destino_nome: 'João Silva'
+  }
+]
+=== TRANSACTION VALIDATION DEBUG ===
+Received transaction data: {
+  "utilizador_origem_id": "1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b",
+  "utilizador_destino_id": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+  "montante": 4,
+  "tipo": "CREDITO",
+  "descricao": "fgdfg",
+  "status": "APROVADA"
+}
+Available users: [
+  {
+    id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    idType: 'string',
+    nome: 'João Silva',
+    ativo: true
+  },
+  {
+    id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    idType: 'string',
+    nome: 'Maria Santos',
+    ativo: true
+  },
+  {
+    id: '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
+    idType: 'string',
+    nome: 'Ana Costa',
+    ativo: true
+  },
+  {
+    id: '4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a',
+    idType: 'string',
+    nome: 'Pedro Almeida',
+    ativo: true
+  }
+]
+Origem ID: 1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b Type: string
+Destino ID: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e Type: string
+Found origem user: { id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b', nome: 'João Silva' }
+Found destino user: { id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e', nome: 'Maria Santos' }
+Validation errors: []
+=== END VALIDATION DEBUG ===
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+Received transaction data: {
+  utilizador_origem_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+  utilizador_destino_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+  montante: 4,
+  tipo: 'CREDITO',
+  descricao: 'vvxcvxcvcx',
+  status: 'PENDENTE'
+}
+=== TRANSACTION VALIDATION DEBUG ===
+Received transaction data: {
+  "utilizador_origem_id": "1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b",
+  "utilizador_destino_id": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+  "montante": 4,
+  "tipo": "CREDITO",
+  "descricao": "vvxcvxcvcx",
+  "status": "PENDENTE"
+}
+Available users: [
+  {
+    id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    idType: 'string',
+    nome: 'João Silva',
+    ativo: true
+  },
+  {
+    id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    idType: 'string',
+    nome: 'Maria Santos',
+    ativo: true
+  },
+  {
+    id: '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
+    idType: 'string',
+    nome: 'Ana Costa',
+    ativo: true
+  },
+  {
+    id: '4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a',
+    idType: 'string',
+    nome: 'Pedro Almeida',
+    ativo: true
+  }
+]
+Origem ID: 1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b Type: string
+Destino ID: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e Type: string
+Found origem user: { id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b', nome: 'João Silva' }
+Found destino user: { id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e', nome: 'Maria Santos' }
+Validation errors: []
+=== END VALIDATION DEBUG ===
+Created transactions: [
+  {
+    id: '1753441515077.7253',
+    data_transacao: '2025-07-25T11:05:15.077Z',
+    status: 'PENDENTE',
+    utilizador_origem_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    utilizador_destino_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    montante: 4,
+    tipo: 'CREDITO',
+    descricao: 'vvxcvxcvcx',
+    utilizador_origem_nome: 'João Silva',
+    utilizador_destino_nome: 'Maria Santos'
+  },
+  {
+    id: '1753441515077.1428',
+    utilizador_origem_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    utilizador_destino_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    montante: 4,
+    tipo: 'DEBITO',
+    status: 'PENDENTE',
+    data_transacao: '2025-07-25T11:05:15.077Z',
+    descricao: '[Contrapartida] vvxcvxcvcx',
+    utilizador_origem_nome: 'Maria Santos',
+    utilizador_destino_nome: 'João Silva'
+  }
+]
+=== TRANSACTION VALIDATION DEBUG ===
+Received transaction data: {
+  "utilizador_origem_id": "1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b",
+  "utilizador_destino_id": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+  "montante": 4,
+  "tipo": "CREDITO",
+  "descricao": "vvxcvxcvcx",
+  "status": "APROVADA"
+}
+Available users: [
+  {
+    id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    idType: 'string',
+    nome: 'João Silva',
+    ativo: true
+  },
+  {
+    id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    idType: 'string',
+    nome: 'Maria Santos',
+    ativo: true
+  },
+  {
+    id: '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
+    idType: 'string',
+    nome: 'Ana Costa',
+    ativo: true
+  },
+  {
+    id: '4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a',
+    idType: 'string',
+    nome: 'Pedro Almeida',
+    ativo: true
+  }
+]
+Origem ID: 1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b Type: string
+Destino ID: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e Type: string
+Found origem user: { id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b', nome: 'João Silva' }
+Found destino user: { id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e', nome: 'Maria Santos' }
+Validation errors: []
+=== END VALIDATION DEBUG ===
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+Received transaction data: {
+  utilizador_origem_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+  utilizador_destino_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+  montante: 5,
+  tipo: 'CREDITO',
+  descricao: 'gfhf',
+  status: 'PENDENTE'
+}
+=== TRANSACTION VALIDATION DEBUG ===
+Received transaction data: {
+  "utilizador_origem_id": "1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b",
+  "utilizador_destino_id": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+  "montante": 5,
+  "tipo": "CREDITO",
+  "descricao": "gfhf",
+  "status": "PENDENTE"
+}
+Available users: [
+  {
+    id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    idType: 'string',
+    nome: 'João Silva',
+    ativo: true
+  },
+  {
+    id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    idType: 'string',
+    nome: 'Maria Santos',
+    ativo: true
+  },
+  {
+    id: '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
+    idType: 'string',
+    nome: 'Ana Costa',
+    ativo: true
+  },
+  {
+    id: '4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a',
+    idType: 'string',
+    nome: 'Pedro Almeida',
+    ativo: true
+  }
+]
+Origem ID: 1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b Type: string
+Destino ID: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e Type: string
+Found origem user: { id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b', nome: 'João Silva' }
+Found destino user: { id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e', nome: 'Maria Santos' }
+Validation errors: []
+=== END VALIDATION DEBUG ===
+Created transactions: [
+  {
+    id: '1753527133342.6765',
+    data_transacao: '2025-07-26T10:52:13.342Z',
+    status: 'PENDENTE',
+    utilizador_origem_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    utilizador_destino_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    montante: 5,
+    tipo: 'CREDITO',
+    descricao: 'gfhf',
+    utilizador_origem_nome: 'João Silva',
+    utilizador_destino_nome: 'Maria Santos'
+  },
+  {
+    id: '1753527133342.7515',
+    utilizador_origem_id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    utilizador_destino_id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    montante: 5,
+    tipo: 'DEBITO',
+    status: 'PENDENTE',
+    data_transacao: '2025-07-26T10:52:13.342Z',
+    descricao: '[Contrapartida] gfhf',
+    utilizador_origem_nome: 'Maria Santos',
+    utilizador_destino_nome: 'João Silva'
+  }
+]
+=== TRANSACTION VALIDATION DEBUG ===
+Received transaction data: {
+  "utilizador_origem_id": "1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b",
+  "utilizador_destino_id": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+  "montante": 5,
+  "tipo": "CREDITO",
+  "descricao": "gfhf",
+  "status": "APROVADA"
+}
+Available users: [
+  {
+    id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+    idType: 'string',
+    nome: 'João Silva',
+    ativo: true
+  },
+  {
+    id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e',
+    idType: 'string',
+    nome: 'Maria Santos',
+    ativo: true
+  },
+  {
+    id: '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
+    idType: 'string',
+    nome: 'Ana Costa',
+    ativo: true
+  },
+  {
+    id: '4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a',
+    idType: 'string',
+    nome: 'Pedro Almeida',
+    ativo: true
+  }
+]
+Origem ID: 1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b Type: string
+Destino ID: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e Type: string
+Found origem user: { id: '1e4f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b', nome: 'João Silva' }
+Found destino user: { id: '2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e', nome: 'Maria Santos' }
+Validation errors: []
+=== END VALIDATION DEBUG ===
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)

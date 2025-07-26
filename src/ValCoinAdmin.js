@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import * as api from '../services/api';
 import {
   Users,
   Coins,
@@ -36,38 +37,10 @@ const ValCoinAdmin = () => {
   const [modalType, setModalType] = useState('view');
   const [error, setError] = useState(null);
   const [formData, setFormData] = useState({});
+  const [contrapartida, setContrapartida] = useState(null);
+  const [mockData, setMockData] = useState({ users: [], transactions: [], subjects: [], classes: [], criteria: [], aluno_disciplina: [] });
 
-  // Mock data
-  const [mockData, setMockData] = useState({
-    users: [
-      { id: '1', numero_mecanografico: '2024001', nome: 'João Silva', email: 'joao@valpacos.edu.pt', tipo_utilizador: 'ALUNO', ativo: true, turma_id: '1', turma: '7A', saldo_vc: 45.50 },
-      { id: '2', numero_mecanografico: '2024002', nome: 'Maria Santos', email: 'maria@valpacos.edu.pt', tipo_utilizador: 'PROFESSOR', ativo: true, departamento: 'Matemática', plafond_mensal: 200 },
-      { id: '3', numero_mecanografico: '2024003', nome: 'Pedro Costa', email: 'pedro@valpacos.edu.pt', tipo_utilizador: 'ALUNO', ativo: true, turma_id: '2', turma: '8B', saldo_vc: 23.75 },
-      { id: '4', numero_mecanografico: '2024004', nome: 'Ana Ferreira', email: 'ana@valpacos.edu.pt', tipo_utilizador: 'DIRETOR_TURMA', ativo: true, turma_id: '3', turma: '9C', departamento: 'Português' }
-    ],
-    transactions: [
-      { id: '1', aluno_origem: 'João Silva', aluno_destino: 'Maria Santos', valor: 10.0, tipo: 'GANHO', status: 'APROVADA', data_transacao: '2024-07-08T10:30:00', descricao: 'Participação exemplar' },
-      { id: '2', aluno_origem: 'João Silva', aluno_destino: 'Maria Santos', valor: 5.0, tipo: 'GASTO', status: 'PENDENTE', data_transacao: '2024-07-08T14:15:00', descricao: 'Serviço de impressão' },
-      { id: '3', aluno_origem: 'Ana Ferreira', aluno_destino: 'João Silva', valor: 15.0, tipo: 'TRANSFERENCIA', status: 'APROVADA', data_transacao: '2024-07-07T16:45:00', descricao: 'Tutoria matemática' }
-    ],
-    subjects: [
-      { id: '1', codigo: 'MAT', nome: 'Matemática', ciclo_id: '3_CICLO', ativo: true },
-      { id: '2', codigo: 'POR', nome: 'Português', ciclo_id: '3_CICLO', ativo: true },
-      { id: '3', codigo: 'HIS', nome: 'História', ciclo_id: '3_CICLO', ativo: true },
-      { id: '4', codigo: 'ING', nome: 'Inglês', ciclo_id: '3_CICLO', ativo: true }
-    ],
-    classes: [
-      { id: '1', codigo: '7A', nome: '7º A', ano_letivo: '2024/2025', ciclo_id: '3_CICLO', diretor_turma_id: '4', diretor_turma: 'Prof. Silva', numero_alunos: 25, ativo: true },
-      { id: '2', codigo: '8B', nome: '8º B', ano_letivo: '2024/2025', ciclo_id: '3_CICLO', diretor_turma_id: '2', diretor_turma: 'Prof. Santos', numero_alunos: 23, ativo: true },
-      { id: '3', codigo: '9C', nome: '9º C', ano_letivo: '2024/2025', ciclo_id: '3_CICLO', diretor_turma_id: '4', diretor_turma: 'Prof. Costa', numero_alunos: 22, ativo: true }
-    ],
-    criteria: [
-      { id: '1', nome: 'Participação Ativa', descricao: 'Participação exemplar na aula', valor_vc: 2, limite_mensal: 10, ciclo_id: '3_CICLO', ativo: true },
-      { id: '2', nome: 'Trabalho Extra', descricao: 'Trabalho adicional de qualidade', valor_vc: 5, limite_mensal: 5, ciclo_id: '3_CICLO', ativo: true },
-      { id: '3', nome: 'Ajuda Colegas', descricao: 'Ajuda a colegas com dificuldades', valor_vc: 3, limite_mensal: 8, ciclo_id: '3_CICLO', ativo: true }
-    ],
-    aluno_disciplina: []
-  });
+  
 
   const dashboardStats = {
     totalUsers: 1247,
@@ -88,19 +61,50 @@ const ValCoinAdmin = () => {
     { id: 'settings', label: 'Configurações', icon: Settings }
   ];
 
-  // Initialize data with mockData
   useEffect(() => {
-    setCurrentData(mockData.users);
-    setLoading(false);
-  }, [mockData.users]);
+    const fetchData = async () => {
+      setLoading(true);
+      try {
+        const [users, transactions, subjects, classes, criteria] = await Promise.all([
+          api.getUsers(),
+          api.getTransactions(),
+          api.getSubjects(),
+          api.getClasses(),
+          api.getCriteria(),
+        ]);
+        setMockData({
+          users: users.data,
+          transactions: transactions.data,
+          subjects: subjects.data,
+          classes: classes.data,
+          criteria: criteria.data,
+          aluno_disciplina: [],
+        });
+      } catch (error) {
+        setError(error.message);
+      }
+      setLoading(false);
+    };
+    fetchData();
+  }, []);
 
-  const openModal = (type, item = null, tab = activeTab) => {
+  const openModal = async (type, item = null, tab = activeTab) => {
     setModalType(type);
     setSelectedItem(item);
     setActiveTab(tab);
     setFormData(item || {});
     setShowModal(true);
     setError(null);
+
+    if (type === 'view' && tab === 'transactions' && item.transaction_group_id) {
+      try {
+        const groupTransactions = await api.getTransactionGroup(item.transaction_group_id);
+        const contrapartidaTransaction = groupTransactions.data.find(t => t.id !== item.id);
+        setContrapartida(contrapartidaTransaction);
+      } catch (error) {
+        setError('Erro ao buscar a transação de contrapartida.');
+      }
+    }
   };
 
   const closeModal = () => {
@@ -142,7 +146,6 @@ const ValCoinAdmin = () => {
       if (modalType === 'create' || modalType === 'edit') {
         if (activeTab === 'classes') {
           const classData = {
-            id: modalType === 'create' ? String(mockData.classes.length + 1) : formData.id,
             codigo: formData.codigo,
             nome: formData.nome,
             ano_letivo: formData.ano_letivo,
@@ -153,19 +156,12 @@ const ValCoinAdmin = () => {
             ativo: formData.ativo === 'true'
           };
           if (modalType === 'create') {
-            setMockData(prev => ({
-              ...prev,
-              classes: [...prev.classes, classData]
-            }));
+            await api.createClass(classData);
           } else {
-            setMockData(prev => ({
-              ...prev,
-              classes: prev.classes.map(c => c.id === formData.id ? { ...c, ...classData } : c)
-            }));
+            await api.updateClass(formData.id, classData);
           }
         } else if (activeTab === 'users' && formData.tipo_utilizador === 'ALUNO') {
           const studentData = {
-            id: modalType === 'create' ? String(mockData.users.length + 1) : formData.id,
             numero_mecanografico: formData.numero_mecanografico,
             nome: formData.nome,
             email: formData.email,
@@ -182,52 +178,46 @@ const ValCoinAdmin = () => {
             saldo_vc: formData.saldo_vc || 0
           };
           if (modalType === 'create') {
-            setMockData(prev => ({
-              ...prev,
-              users: [...prev.users, studentData]
-            }));
-            setCurrentData(prev => [...prev, studentData]);
+            await api.createUser(studentData);
           } else {
-            setMockData(prev => ({
-              ...prev,
-              users: prev.users.map(u => u.id === formData.id ? { ...u, ...studentData } : u)
-            }));
-            setCurrentData(prev => prev.map(u => u.id === formData.id ? { ...u, ...studentData } : u));
+            await api.updateUser(formData.id, studentData);
           }
         } else if (activeTab === 'subjects') {
           const subjectData = {
-            id: modalType === 'create' ? String(mockData.subjects.length + 1) : formData.id,
             codigo: formData.codigo,
             nome: formData.nome,
             ciclo_id: formData.ciclo_id,
             ativo: formData.ativo === 'true'
           };
           if (modalType === 'create') {
-            setMockData(prev => ({
-              ...prev,
-              subjects: [...prev.subjects, subjectData]
-            }));
+            await api.createSubject(subjectData);
           } else {
-            setMockData(prev => ({
-              ...prev,
-              subjects: prev.subjects.map(s => s.id === formData.id ? { ...s, ...subjectData } : s)
-            }));
+            await api.updateSubject(formData.id, subjectData);
           }
         } else if (activeTab === 'aluno_disciplina') {
           const enrollmentData = {
-            id: String(mockData.aluno_disciplina.length + 1),
             aluno_id: overrideFormData.aluno_id,
             disciplina_id: overrideFormData.disciplina_id,
             ano_letivo: overrideFormData.ano_letivo,
             ativo: overrideFormData.ativo === 'true'
           };
-          setMockData(prev => ({
-            ...prev,
-            aluno_disciplina: [...prev.aluno_disciplina, enrollmentData]
-          }));
+          await api.enrollStudent(enrollmentData);
+        } else if (activeTab === 'criteria') {
+          const criteriaData = {
+            nome: formData.nome,
+            descricao: formData.descricao,
+            valor_vc: parseInt(formData.valor_vc),
+            limite_mensal: parseInt(formData.limite_mensal),
+            ciclo_id: formData.ciclo_id,
+            ativo: formData.ativo === 'true'
+          };
+          if (modalType === 'create') {
+            await api.createCriteria(criteriaData);
+          } else {
+            await api.updateCriteria(formData.id, criteriaData);
+          }
         } else if (activeTab === 'transactions') {
           const transactionData = {
-            id: modalType === 'create' ? String(mockData.transactions.length + 1) : formData.id,
             aluno_origem: formData.aluno_origem,
             aluno_destino: formData.aluno_destino,
             valor: parseFloat(formData.valor),
@@ -236,43 +226,48 @@ const ValCoinAdmin = () => {
             data_transacao: formData.data_transacao || new Date().toISOString(),
             descricao: formData.descricao
           };
-          if (modalType === 'create') {
-            setMockData(prev => ({
-              ...prev,
-              transactions: [...prev.transactions, transactionData]
-            }));
-          } else {
-            setMockData(prev => ({
-              ...prev,
-              transactions: prev.transactions.map(t => t.id === formData.id ? { ...t, ...transactionData } : t)
-            }));
-          }
+          await api.createTransaction(transactionData);
         }
       } else if (modalType === 'delete') {
         if (activeTab === 'classes') {
-          setMockData(prev => ({
-            ...prev,
-            classes: prev.classes.filter(c => c.id !== formData.id)
-          }));
+          await api.deleteClass(formData.id);
         } else if (activeTab === 'users') {
-          setMockData(prev => ({
-            ...prev,
-            users: prev.users.filter(u => u.id !== formData.id)
-          }));
-          setCurrentData(prev => prev.filter(u => u.id !== formData.id));
+          await api.deleteUser(formData.id);
         } else if (activeTab === 'subjects') {
-          setMockData(prev => ({
-            ...prev,
-            subjects: prev.subjects.filter(s => s.id !== formData.id)
-          }));
+          await api.deleteSubject(formData.id);
+        } else if (activeTab === 'criteria') {
+          await api.deleteCriteria(formData.id);
         } else if (activeTab === 'transactions') {
-          setMockData(prev => ({
-            ...prev,
-            transactions: prev.transactions.filter(t => t.id !== formData.id)
-          }));
+          // not implemented
         }
       }
       closeModal();
+      // Refresh data
+      const fetchData = async () => {
+        setLoading(true);
+        try {
+          const [users, transactions, subjects, classes, criteria] = await Promise.all([
+            api.getUsers(),
+            api.getTransactions(),
+            api.getSubjects(),
+            api.getClasses(),
+            api.getCriteria(),
+          ]);
+          setMockData({
+            users: users.data,
+            transactions: transactions.data,
+            subjects: subjects.data,
+            classes: classes.data,
+            criteria: criteria.data,
+            aluno_disciplina: [],
+          });
+          setCurrentData(users.data);
+        } catch (error) {
+          setError(error.message);
+        }
+        setLoading(false);
+      };
+      fetchData();
     } catch (err) {
       setError('Erro ao processar a operação: ' + err.message);
     } finally {
@@ -386,76 +381,7 @@ const ValCoinAdmin = () => {
     </div>
   );
 
-  const renderUsers = () => {
-    const columns = [
-      { key: 'numero_mecanografico', label: 'Nº Mecanográfico' },
-      { key: 'nome', label: 'Nome' },
-      { key: 'email', label: 'Email' },
-      {
-        key: 'tipo_utilizador',
-        label: 'Tipo',
-        render: (value) => (
-          <span className={`px-2 py-1 rounded-full text-xs ${getUserTypeColor(value)}`}>
-            {value}
-          </span>
-        )
-      },
-      {
-        key: 'ativo',
-        label: 'Estado',
-        render: (value) => (
-          <span className={`px-2 py-1 rounded-full text-xs ${value ? 'text-green-600 bg-green-100' : 'text-red-600 bg-red-100'}`}>
-            {value ? 'Ativo' : 'Inativo'}
-          </span>
-        )
-      },
-      { key: 'turma', label: 'Turma/Departamento' }
-    ];
-
-    const filteredUsers = mockData.users.filter(user =>
-      (filterStatus === 'all' || user.tipo_utilizador === filterStatus) &&
-      (user.nome.toLowerCase().includes(searchTerm.toLowerCase()) ||
-       user.numero_mecanografico.includes(searchTerm))
-    );
-
-    return (
-      <div className="space-y-4">
-        <div className="flex justify-between items-center">
-          <h2 className="text-xl font-semibold">Utilizadores</h2>
-          <button
-            onClick={() => openModal('create', null, 'users')}
-            className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 flex items-center space-x-2"
-          >
-            <Plus className="w-4 h-4" />
-            <span>Novo Utilizador</span>
-          </button>
-        </div>
-        <div className="flex space-x-4">
-          <div className="flex-1 relative">
-            <Search className="w-4 h-4 absolute left-3 top-3 text-gray-400" />
-            <input
-              type="text"
-              placeholder="Pesquisar utilizadores..."
-              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
-          </div>
-          <select
-            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            value={filterStatus}
-            onChange={(e) => setFilterStatus(e.target.value)}
-          >
-            <option value="all">Todos</option>
-            <option value="ALUNO">Alunos</option>
-            <option value="PROFESSOR">Professores</option>
-            <option value="DIRETOR_TURMA">Diretores de Turma</option>
-          </select>
-        </div>
-        {renderTable(filteredUsers, columns)}
-      </div>
-    );
-  };
+  
 
   const renderClasses = () => {
     const columns = [
@@ -836,6 +762,37 @@ const ValCoinAdmin = () => {
                     </button>
                   </div>
                 )}
+                {isViewMode && activeTab === 'transactions' && selectedItem && contrapartida && (
+                  <div className="mt-6 pt-4 border-t">
+                    <h4 className="text-md font-semibold mb-2">Transação de Contrapartida</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Aluno Origem</label>
+                        <p>{contrapartida.utilizador_origem_nome}</p>
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Aluno Destino</label>
+                        <p>{contrapartida.utilizador_destino_nome}</p>
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Valor</label>
+                        <p>{contrapartida.montante} VC</p>
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Tipo</label>
+                        <p>{contrapartida.tipo}</p>
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Estado</label>
+                        <p>{contrapartida.status}</p>
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Descrição</label>
+                        <p>{contrapartida.descricao}</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             ) : (
               <div className="space-y-4">
@@ -1159,6 +1116,94 @@ const ValCoinAdmin = () => {
                     </div>
                   </div>
                 )}
+                {activeTab === 'criteria' && (
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Nome
+                      </label>
+                      <input
+                        type="text"
+                        name="nome"
+                        value={formData.nome || ''}
+                        onChange={handleInputChange}
+                        className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        disabled={isViewMode}
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Descrição
+                      </label>
+                      <input
+                        type="text"
+                        name="descricao"
+                        value={formData.descricao || ''}
+                        onChange={handleInputChange}
+                        className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        disabled={isViewMode}
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Valor VC
+                      </label>
+                      <input
+                        type="number"
+                        name="valor_vc"
+                        value={formData.valor_vc || ''}
+                        onChange={handleInputChange}
+                        className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        disabled={isViewMode}
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Limite Mensal
+                      </label>
+                      <input
+                        type="number"
+                        name="limite_mensal"
+                        value={formData.limite_mensal || ''}
+                        onChange={handleInputChange}
+                        className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        disabled={isViewMode}
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Ciclo
+                      </label>
+                      <select
+                        name="ciclo_id"
+                        value={formData.ciclo_id || ''}
+                        onChange={handleInputChange}
+                        className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        disabled={isViewMode}
+                      >
+                        <option value="1_CICLO">1º Ciclo</option>
+                        <option value="2_CICLO">2º Ciclo</option>
+                        <option value="3_CICLO">3º Ciclo</option>
+                        <option value="SECUNDARIO">Secundário</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Estado
+                      </label>
+                      <select
+                        name="ativo"
+                        value={formData.ativo === undefined ? '' : formData.ativo.toString()}
+                        onChange={handleInputChange}
+                        className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        disabled={isViewMode}
+                      >
+                        <option value="true">Ativo</option>
+                        <option value="false">Inativo</option>
+                      </select>
+                    </div>
+                  </div>
+                )}
                 {!isViewMode && (
                   <div className="flex justify-end space-x-3 pt-4">
                     <button
@@ -1190,7 +1235,7 @@ const ValCoinAdmin = () => {
       case 'dashboard':
         return renderDashboard();
       case 'users':
-        return renderUsers();
+        return <Users users={mockData.users} setUsers={(newUsers) => setMockData(prev => ({ ...prev, users: newUsers }))} openModal={openModal} />;
       case 'transactions':
         return renderTransactions();
       case 'subjects':
@@ -1198,18 +1243,7 @@ const ValCoinAdmin = () => {
       case 'classes':
         return renderClasses();
       case 'criteria':
-        return renderTable(mockData.criteria, [
-          { key: 'nome', label: 'Nome' },
-          { key: 'descricao', label: 'Descrição' },
-          { key: 'valor_vc', label: 'Valor VC', render: (value) => `${value} VC` },
-          { key: 'limite_mensal', label: 'Limite Mensal' },
-          { key: 'ciclo_id', label: 'Ciclo' },
-          { key: 'ativo', label: 'Estado', render: (value) => (
-            <span className={`px-2 py-1 rounded-full text-xs ${value ? 'text-green-600 bg-green-100' : 'text-red-600 bg-red-100'}`}>
-              {value ? 'Ativo' : 'Inativo'}
-            </span>
-          )}
-        ]);
+        return renderCriteria();
       case 'aluno_disciplina':
         return renderAlunoDisciplina();
       case 'settings':
@@ -1283,6 +1317,41 @@ const ValCoinAdmin = () => {
           </select>
         </div>
         {renderTable(mockData.transactions, columns)}
+      </div>
+    );
+  };
+
+  const renderCriteria = () => {
+    const columns = [
+      { key: 'nome', label: 'Nome' },
+      { key: 'descricao', label: 'Descrição' },
+      { key: 'valor_vc', label: 'Valor VC', render: (value) => `${value} VC` },
+      { key: 'limite_mensal', label: 'Limite Mensal' },
+      { key: 'ciclo_id', label: 'Ciclo' },
+      {
+        key: 'ativo',
+        label: 'Estado',
+        render: (value) => (
+          <span className={`px-2 py-1 rounded-full text-xs ${value ? 'text-green-600 bg-green-100' : 'text-red-600 bg-red-100'}`}>
+            {value ? 'Ativo' : 'Inativo'}
+          </span>
+        )
+      }
+    ];
+
+    return (
+      <div className="space-y-4">
+        <div className="flex justify-between items-center">
+          <h2 className="text-xl font-semibold">Critérios</h2>
+          <button
+            onClick={() => openModal('create', null, 'criteria')}
+            className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 flex items-center space-x-2"
+          >
+            <Plus className="w-4 h-4" />
+            <span>Novo Critério</span>
+          </button>
+        </div>
+        {renderTable(mockData.criteria, columns)}
       </div>
     );
   };

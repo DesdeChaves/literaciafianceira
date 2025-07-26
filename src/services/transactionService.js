@@ -1,30 +1,147 @@
-import { mockData } from '../data/mockData';
-import { v4 as uuidv4 } from 'uuid';
-
-export const getTransactions = async () => {
-  return mockData.transactions; // Replace with: await axios.get('/api/transactions');
-};
+const API_BASE_URL = 'http://localhost:3001/api';
 
 export const createTransaction = async (transactionData) => {
-  const newTransaction = {
-    ...transactionData,
-    id: uuidv4(),
-    date: new Date().toISOString(),
-  };
-  mockData.transactions.push(newTransaction); // Replace with: await axios.post('/api/transactions', transactionData);
-  return newTransaction;
+  try {
+    const response = await fetch(`${API_BASE_URL}/transactions`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(transactionData),
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.error || 'Erro ao criar transação');
+    }
+
+    const result = await response.json();
+    
+    // Garantir que sempre retorna um array
+    if (!Array.isArray(result)) {
+      console.error('Expected array but got:', result);
+      throw new Error('Resposta do servidor inválida');
+    }
+    
+    return result;
+  } catch (error) {
+    console.error('Error creating transaction:', error);
+    throw error;
+  }
 };
 
 export const updateTransaction = async (id, transactionData) => {
-  const index = mockData.transactions.findIndex((txn) => txn.id === id);
-  if (index === -1) throw new Error('Transaction not found');
-  const updatedTransaction = { ...transactionData, id };
-  mockData.transactions[index] = updatedTransaction; // Replace with: await axios.put(`/api/transactions/${id}`, transactionData);
-  return updatedTransaction;
+  try {
+    const response = await fetch(`${API_BASE_URL}/transactions/${id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(transactionData),
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.error || 'Erro ao atualizar transação');
+    }
+
+    const result = await response.json();
+    return result;
+  } catch (error) {
+    console.error('Error updating transaction:', error);
+    throw error;
+  }
 };
 
 export const deleteTransaction = async (id) => {
-  const index = mockData.transactions.findIndex((txn) => txn.id === id);
-  if (index === -1) throw new Error('Transaction not found');
-  mockData.transactions.splice(index, 1); // Replace with: await axios.delete(`/api/transactions/${id}`);
+  try {
+    const response = await fetch(`${API_BASE_URL}/transactions/${id}`, {
+      method: 'DELETE',
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.error || 'Erro ao excluir transação');
+    }
+
+    return true;
+  } catch (error) {
+    console.error('Error deleting transaction:', error);
+    throw error;
+  }
+};
+
+export const getTransactions = async () => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/transactions`);
+    
+    if (!response.ok) {
+      console.error('Erro ao buscar transações');
+      return [];
+    }
+
+    const result = await response.json();
+    
+    // Garantir que sempre retorna um array
+    if (!Array.isArray(result)) {
+      console.error('Expected array but got:', result);
+      return [];
+    }
+    
+    return result;
+  } catch (error) {
+    console.error('Error fetching transactions:', error);
+    throw error;
+  }
+};
+
+export const getTransaction = async (id) => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/transactions/${id}`);
+    
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.error || 'Erro ao buscar transação');
+    }
+
+    const result = await response.json();
+    return result;
+  } catch (error) {
+    console.error('Error fetching transaction:', error);
+    throw error;
+  }
+};
+
+export const getTransactionGroup = async (groupId) => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/transactions/group/${groupId}`);
+    
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.error || 'Erro ao buscar grupo de transações');
+    }
+
+    const result = await response.json();
+    return result;
+  } catch (error) {
+    console.error('Error fetching transaction group:', error);
+    throw error;
+  }
+};
+
+export const getTransactionsByUser = async (userId) => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/transactions/user/${userId}`);
+    
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.error || 'Erro ao buscar transações do usuário');
+    }
+
+    const result = await response.json();
+    return result;
+  } catch (error) {
+    console.error('Error fetching user transactions:', error);
+    throw error;
+  }
 };
