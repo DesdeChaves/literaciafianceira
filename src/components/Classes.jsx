@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+// Classes.jsx
+import React, { useState, useMemo } from 'react';
 import { Plus, Search } from 'lucide-react';
+import { debounce } from 'lodash';
 import Table from './Table';
-import { mockData } from '../data/mockData'; // Added import
 
-const Classes = ({ classes, setClasses, users, openModal }) => {
+const Classes = ({ classes, setClasses, users, openModal, ciclos, isLoading, error }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const getProfessorName = (diretor_turma_id) => {
@@ -11,12 +12,21 @@ const Classes = ({ classes, setClasses, users, openModal }) => {
     return professor ? professor.nome : 'N/A';
   };
 
-  const filteredClasses = classes.filter(
-    (cls) =>
-      cls.codigo.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      cls.nome.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      getProfessorName(cls.diretor_turma_id).toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const getCicloName = (ciclo_id) => {
+    const ciclo = ciclos.find((c) => c.id === ciclo_id);
+    return ciclo ? ciclo.nome : 'N/A';
+  };
+
+  const filteredClasses = useMemo(() => {
+    if (!classes || !Array.isArray(classes)) return [];
+    return classes.filter((cls) => {
+      if (!cls || !cls.nome) return false;
+      return (
+        cls.nome.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        cls.ano_letivo.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    });
+  }, [classes, searchTerm]);
 
   const columns = [
     { key: 'codigo', label: 'Código' },
@@ -25,10 +35,7 @@ const Classes = ({ classes, setClasses, users, openModal }) => {
     {
       key: 'ciclo_id',
       label: 'Ciclo',
-      render: (ciclo_id) => {
-        const ciclo = mockData.ciclos_ensino.find((c) => c.id === ciclo_id);
-        return ciclo ? ciclo.nome : 'N/A';
-      },
+      render: (ciclo_id) => getCicloName(ciclo_id),
     },
     {
       key: 'diretor_turma_id',
@@ -50,6 +57,11 @@ const Classes = ({ classes, setClasses, users, openModal }) => {
     },
   ];
 
+  const debouncedSetSearchTerm = useMemo(() => debounce(setSearchTerm, 300), []);
+
+  if (isLoading) return <div className="p-4">Loading...</div>;
+  if (error) return <p className="text-red-500 p-4">{error}</p>;
+
   return (
     <div className="space-y-4">
       <div className="flex justify-between items-center">
@@ -57,6 +69,7 @@ const Classes = ({ classes, setClasses, users, openModal }) => {
         <button
           onClick={() => openModal('create')}
           className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 flex items-center space-x-2"
+          aria-label="Criar nova turma"
         >
           <Plus className="w-4 h-4" />
           <span>Nova Turma</span>
@@ -64,16 +77,20 @@ const Classes = ({ classes, setClasses, users, openModal }) => {
       </div>
       <div className="flex space-x-4">
         <div className="flex-1 relative">
-          <Search className="w-4 h-4 absolute left-3 top-3 text-gray-400" />
+          <Search className="w-4 h-4 absolute left-3 top-3 text-gray-400" aria-hidden="true" />
           <input
             type="text"
-            placeholder="Pesquisar turmas..."
+            placeholder="Pesquisar por nome ou ano letivo..."
             className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
+            onChange={(e) => debouncedSetSearchTerm(e.target.value)}
+            aria-label="Pesquisar turmas"
           />
         </div>
       </div>
+      {filteredClasses.length === 0 && (
+        <p className="text-gray-500">Nenhuma turma encontrada.</p>
+      )}
       <Table data={filteredClasses} columns={columns} openModal={openModal} />
     </div>
   );

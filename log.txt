@@ -2477,3 +2477,421 @@ TypeError: Cannot read properties of undefined (reading 'includes')
     at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
     at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
     at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)
+TypeError: Cannot read properties of undefined (reading 'includes')
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:78
+    at Array.filter (<anonymous>)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/server.js:278:53
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/lib/layer.js:152:17)
+    at /Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:295:15
+    at processParams (/Users/jorgemagalhaes/Desktop/2024_25/literacia financeira/valcoin-admin/node_modules/router/index.js:582:12)

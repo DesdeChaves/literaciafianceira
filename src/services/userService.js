@@ -1,60 +1,41 @@
-import { mockData } from '../data/mockData';
-import { v4 as uuidv4 } from 'uuid';
+import * as api from './api';
 
 export const getUsers = async () => {
-  console.log('getUsers called, returning:', mockData.users); // Debug
-  return [...mockData.users]; // Return a copy to avoid mutation issues
+  try {
+    const response = await api.getUsers();
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching users:', error);
+    throw error;
+  }
 };
 
 export const createUser = async (userData) => {
-  console.log('Creating user:', userData); // Debug
-  const existingUser = mockData.users.find(
-    (user) =>
-      user.numero_mecanografico === userData.numero_mecanografico ||
-      user.email === userData.email
-  );
-  if (existingUser) throw new Error('Número mecanográfico ou email já está em uso.');
-
-  const newUser = {
-    ...userData,
-    id: uuidv4(),
-    data_criacao: new Date().toISOString(),
-    data_atualizacao: new Date().toISOString(),
-    ultimo_login: null,
-    consentimento_rgpd: true,
-    data_consentimento_rgpd: new Date().toISOString(),
-  };
-  mockData.users = [...mockData.users, newUser];
-  console.log('Updated mockData.users:', mockData.users); // Debug
-  return newUser;
+  try {
+    const response = await api.createUser(userData);
+    return response.data;
+  } catch (error) {
+    console.error('Error creating user:', error);
+    throw error;
+  }
 };
 
 export const updateUser = async (id, userData) => {
-  const index = mockData.users.findIndex((user) => user.id === id);
-  if (index === -1) throw new Error('Utilizador não encontrado.');
-
-  const existingUser = mockData.users.find(
-    (user) =>
-      (user.numero_mecanografico === userData.numero_mecanografico ||
-        user.email === userData.email) &&
-      user.id !== id
-  );
-  if (existingUser) throw new Error('Número mecanográfico ou email já está em uso.');
-
-  const updatedUser = {
-    ...mockData.users[index],
-    ...userData,
-    id,
-    data_atualizacao: new Date().toISOString(),
-  };
-  mockData.users[index] = updatedUser;
-  console.log('Updated mockData.users:', mockData.users); // Debug
-  return updatedUser;
+  try {
+    const response = await api.updateUser(id, userData);
+    return response.data;
+  } catch (error) {
+    console.error(`Error updating user ${id}:`, error);
+    throw error;
+  }
 };
 
 export const deleteUser = async (id) => {
-  const index = mockData.users.findIndex((user) => user.id === id);
-  if (index === -1) throw new Error('Utilizador não encontrado.');
-  mockData.users.splice(index, 1);
-  console.log('Updated mockData.users:', mockData.users); // Debug
+  try {
+    await api.deleteUser(id);
+  } catch (error) {
+    console.error(`Error deleting user ${id}:`, error);
+    throw error;
+  }
 };
+

@@ -2,17 +2,23 @@ import React, { useState } from 'react';
 import { Plus, Search } from 'lucide-react';
 import Table from './Table';
 
-const Users = ({ users, setUsers, openModal }) => {
+const Users = ({ users, openModal }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
   console.log('Users component received:', users); // Debug
 
-  const filteredUsers = users.filter(
-    (user) =>
-      user.nome.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      user.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      user.numero_mecanografico.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredUsers = users.filter((user) => {
+    // Ensure user has required properties, provide fallback empty strings
+    const nome = user.nome || '';
+    const email = user.email || '';
+    const numero_mecanografico = user.numero_mecanografico || '';
+
+    return (
+      nome.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      email.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      numero_mecanografico.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  });
 
   const columns = [
     { key: 'numero_mecanografico', label: 'Número Mecanográfico' },

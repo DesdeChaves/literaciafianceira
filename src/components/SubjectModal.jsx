@@ -1,8 +1,19 @@
+// src/components/SubjectModal.jsx
 import React, { useState, useEffect, useMemo } from 'react';
 import { XCircle, Trash } from 'lucide-react';
 import { toast } from 'react-toastify';
-import { createSubject, updateSubject, deleteSubject, createTeacherAssignment, createStudentEnrollment, removeTeacherAssignment, removeStudentEnrollment } from '../services';
-import { mockData } from '../data/mockData';
+import {
+  createSubject,
+  updateSubject,
+  deleteSubject,
+  createTeacherAssignment,
+  createStudentEnrollment,
+  removeTeacherAssignment,
+  removeStudentEnrollment,
+  createDisciplinaTurma,
+  getDisciplinaTurma,
+  getProfessorDisciplinaTurma,
+} from '../services/subjectService';
 
 const SubjectModal = ({ showModal, closeModal, modalType, selectedItem, setSubjects, users, classes, setProfessorDisciplinaTurma, setAlunoDisciplina, setDisciplinaTurma }) => {
   const [formData, setFormData] = useState({
@@ -15,6 +26,8 @@ const SubjectModal = ({ showModal, closeModal, modalType, selectedItem, setSubje
     selectedStudents: [],
   });
   const [errors, setErrors] = useState({});
+  const [professorDisciplinaTurma, setLocalProfessorDisciplinaTurma] = useState([]);
+  const [disciplinaTurma, setLocalDisciplinaTurma] = useState([]);
 
   const teachers = useMemo(() => users.filter((user) => user.tipo_utilizador === 'PROFESSOR'), [users]);
   const availableClasses = useMemo(() => classes.filter((cls) => cls.ativo), [classes]);
@@ -23,23 +36,23 @@ const SubjectModal = ({ showModal, closeModal, modalType, selectedItem, setSubje
   // Enrolled students for view/edit mode
   const enrolledStudents = useMemo(() => {
     if (!selectedItem) return [];
-    return mockData.aluno_disciplina
+    return (window.alunoDisciplina || []) // Use global state or prop if available
       .filter((ad) => ad.disciplina_id === selectedItem.id && ad.ativo)
       .map((ad) => {
         const student = users.find((user) => user.id === ad.aluno_id && user.tipo_utilizador === 'ALUNO');
-        const classInfo = mockData.classes.find((cls) => cls.id === mockData.disciplina_turma.find((dt) => dt.disciplina_id === selectedItem.id && dt.ano_letivo === ad.ano_letivo)?.turma_id);
+        const classInfo = classes.find((cls) => cls.id === disciplinaTurma.find((dt) => dt.disciplina_id === selectedItem.id && dt.ano_letivo === ad.ano_letivo)?.turma_id);
         return {
           ...ad,
           studentName: student ? student.nome : 'Desconhecido',
           className: classInfo ? classInfo.nome : 'N/A',
         };
       });
-  }, [selectedItem, users]);
+  }, [selectedItem, users, classes, disciplinaTurma]);
 
   // Assigned teachers for view/edit mode
   const assignedTeachers = useMemo(() => {
     if (!selectedItem) return [];
-    return mockData.professor_disciplina_turma
+    return professorDisciplinaTurma
       .filter((pdt) => pdt.disciplina_id === selectedItem.id && pdt.ativo)
       .map((pdt) => {
         const teacher = users.find((user) => user.id === pdt.professor_id && user.tipo_utilizador === 'PROFESSOR');
@@ -50,14 +63,31 @@ const SubjectModal = ({ showModal, closeModal, modalType, selectedItem, setSubje
           className: classInfo ? classInfo.nome : 'N/A',
         };
       });
-  }, [selectedItem, users, classes]);
+  }, [selectedItem, users, classes, professorDisciplinaTurma]);
 
   useEffect(() => {
     if (!showModal) return;
 
+    // Fetch professor_disciplina_turma and disciplina_turma
+    const fetchData = async () => {
+      try {
+        const [pdtData, dtData] = await Promise.all([
+          getProfessorDisciplinaTurma(),
+          getDisciplinaTurma(),
+        ]);
+        setLocalProfessorDisciplinaTurma(pdtData);
+        setLocalDisciplinaTurma(dtData);
+        setProfessorDisciplinaTurma(pdtData);
+        setDisciplinaTurma(dtData);
+      } catch (error) {
+        console.error('Error fetching professor_disciplina_turma or disciplina_turma:', error);
+        toast.error('Erro ao carregar dados de atribuições.');
+      }
+    };
+    fetchData();
+
     if (selectedItem && modalType !== 'create') {
-      // Pre-select teachers for edit mode
-      const preSelectedTeachers = mockData.professor_disciplina_turma
+      const preSelectedTeachers = professorDisciplinaTurma
         .filter((pdt) => pdt.disciplina_id === selectedItem.id && pdt.ativo)
         .map((pdt) => pdt.professor_id);
       
@@ -82,7 +112,7 @@ const SubjectModal = ({ showModal, closeModal, modalType, selectedItem, setSubje
       });
     }
     setErrors({});
-  }, [showModal, modalType, selectedItem, availableClasses]);
+  }, [showModal, modalType, selectedItem, availableClasses, professorDisciplinaTurma]);
 
   if (!showModal) return null;
 
@@ -106,7 +136,7 @@ const SubjectModal = ({ showModal, closeModal, modalType, selectedItem, setSubje
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
-    console.log('Input change:', { name, value, type, checked }); // Debug
+    console.log('Input change:', { name, value, type, checked });
     setFormData((prev) => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : value,
@@ -137,17 +167,17 @@ const SubjectModal = ({ showModal, closeModal, modalType, selectedItem, setSubje
       setAlunoDisciplina((prev) =>
         prev.map((ad) => (ad.id === enrollmentId ? { ...ad, ativo: false } : ad))
       );
-      console.log('Triggering toast: Aluno removido com sucesso!'); // Debug
+      console.log('Triggering toast: Aluno removido com sucesso!');
       toast.success('Aluno removido com sucesso!');
     } catch (error) {
-      console.log('Error removing student:', error); // Debug
-      toast.error(error.message || 'Erro ao remover aluno.');
+      console.error('Error removing student:', error);
+      toast.error(error || 'Erro ao remover aluno.');
     }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData); // Debug
+    console.log('Form submitted:', formData);
     if (!validateForm()) return;
 
     try {
@@ -172,7 +202,7 @@ const SubjectModal = ({ showModal, closeModal, modalType, selectedItem, setSubje
         );
 
         // Update teacher assignments
-        const currentTeacherAssignments = mockData.professor_disciplina_turma
+        const currentTeacherAssignments = professorDisciplinaTurma
           .filter((pdt) => pdt.disciplina_id === selectedItem.id && pdt.ativo)
           .map((pdt) => pdt.professor_id);
 
@@ -183,7 +213,6 @@ const SubjectModal = ({ showModal, closeModal, modalType, selectedItem, setSubje
           (id) => !formData.professor_ids.includes(id)
         );
 
-        // Add new teacher assignments
         const newAssignments = await Promise.all(
           teachersToAdd.map((professorId) =>
             createTeacherAssignment({
@@ -195,10 +224,9 @@ const SubjectModal = ({ showModal, closeModal, modalType, selectedItem, setSubje
           )
         );
 
-        // Remove teacher assignments (set ativo = false)
         await Promise.all(
           teachersToRemove.map(async (professorId) => {
-            const assignment = mockData.professor_disciplina_turma.find(
+            const assignment = professorDisciplinaTurma.find(
               (pdt) =>
                 pdt.professor_id === professorId &&
                 pdt.disciplina_id === selectedItem.id &&
@@ -228,37 +256,37 @@ const SubjectModal = ({ showModal, closeModal, modalType, selectedItem, setSubje
           )
         );
 
-        // Update disciplina_turma if necessary
+        // Update disciplina_turma
         const disciplinaTurmaData = {
           disciplina_id: selectedItem.id,
           turma_id: formData.turma_id,
           ano_letivo: formData.ano_letivo,
         };
-        const existingDisciplinaTurma = mockData.disciplina_turma.find(
+        const existingDisciplinaTurma = disciplinaTurma.find(
           (dt) =>
             dt.disciplina_id === selectedItem.id &&
             dt.turma_id === formData.turma_id &&
-            dt.ano_letivo === formData.ano_letivo
+            dt.ano_letivo === formData.ano_letivo &&
+            dt.ativo
         );
         if (!existingDisciplinaTurma && (newEnrollments.length > 0 || teachersToAdd.length > 0)) {
-          const newDisciplinaTurma = {
-            id: require('uuid').v4(),
+          const newDisciplinaTurma = await createDisciplinaTurma({
             ...disciplinaTurmaData,
             ativo: true,
             data_criacao: new Date().toISOString(),
-          };
+          });
           setDisciplinaTurma((prev) => [...prev, newDisciplinaTurma]);
         }
 
         setAlunoDisciplina((prev) => [...prev, ...newEnrollments]);
       }
 
-      console.log('Triggering toast:', isCreateMode ? 'Disciplina criada com sucesso!' : 'Disciplina atualizada com sucesso!'); // Debug
+      console.log('Triggering toast:', isCreateMode ? 'Disciplina criada com sucesso!' : 'Disciplina atualizada com sucesso!');
       toast.success(isCreateMode ? 'Disciplina criada com sucesso!' : 'Disciplina atualizada com sucesso!');
       closeModal();
     } catch (error) {
-      console.log('Error during submission:', error); // Debug
-      toast.error(error.message || 'Erro ao salvar disciplina.');
+      console.error('Error during submission:', error);
+      toast.error(error || 'Erro ao salvar disciplina.');
     }
   };
 
@@ -268,20 +296,20 @@ const SubjectModal = ({ showModal, closeModal, modalType, selectedItem, setSubje
       setSubjects((prevSubjects) =>
         prevSubjects.filter((subject) => subject.id !== selectedItem.id)
       );
-      console.log('Triggering toast: Disciplina excluída com sucesso!'); // Debug
+      console.log('Triggering toast: Disciplina excluída com sucesso!');
       toast.success('Disciplina excluída com sucesso!');
       closeModal();
     } catch (error) {
-      console.log('Error during deletion:', error); // Debug
-      toast.error(error.message || 'Erro ao excluir disciplina.');
+      console.error('Error during deletion:', error);
+      toast.error(error || 'Erro ao excluir disciplina.');
     }
   };
 
   const getClassStudents = () => {
     return students.filter((student) =>
-      mockData.enrollments.some(
-        (enrollment) => enrollment.id === student.id && enrollment.turma_id === formData.turma_id
-      )
+      window.alunoTurma?.some(
+        (enrollment) => enrollment.aluno_id === student.id && enrollment.turma_id === formData.turma_id && enrollment.ativo
+      ) || []
     );
   };
 
@@ -421,9 +449,7 @@ const SubjectModal = ({ showModal, closeModal, modalType, selectedItem, setSubje
                     <input
                       type="text"
                       name="nome"
-                      className={`w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-                        errors.nome ? 'border-red-500' : ''
-                      }`}
+                      className={`w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${errors.nome ? 'border-red-500' : ''}`}
                       value={formData.nome || ''}
                       onChange={handleInputChange}
                       disabled={isViewMode}
@@ -435,9 +461,7 @@ const SubjectModal = ({ showModal, closeModal, modalType, selectedItem, setSubje
                     <input
                       type="text"
                       name="codigo"
-                      className={`w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-                        errors.codigo ? 'border-red-500' : ''
-                      }`}
+                      className={`w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${errors.codigo ? 'border-red-500' : ''}`}
                       value={formData.codigo || ''}
                       onChange={handleInputChange}
                       disabled={isViewMode}
@@ -463,9 +487,7 @@ const SubjectModal = ({ showModal, closeModal, modalType, selectedItem, setSubje
                         <label className="block text-sm font-medium text-gray-700 mb-1">Turma (Opcional)</label>
                         <select
                           name="turma_id"
-                          className={`w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-                            errors.turma_id ? 'border-red-500' : ''
-                          }`}
+                          className={`w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${errors.turma_id ? 'border-red-500' : ''}`}
                           value={formData.turma_id}
                           onChange={handleInputChange}
                         >
@@ -483,9 +505,7 @@ const SubjectModal = ({ showModal, closeModal, modalType, selectedItem, setSubje
                         <input
                           type="text"
                           name="ano_letivo"
-                          className={`w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-                            errors.ano_letivo ? 'border-red-500' : ''
-                          }`}
+                          className={`w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${errors.ano_letivo ? 'border-red-500' : ''}`}
                           value={formData.ano_letivo}
                           onChange={handleInputChange}
                           placeholder="Ex: 2024/2025"

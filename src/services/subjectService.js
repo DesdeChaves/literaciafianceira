@@ -1,127 +1,144 @@
-import { mockData } from '../data/mockData';
-import { v4 as uuidv4 } from 'uuid';
+// src/services/subjectService.js
+import axios from 'axios';
+
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001/api';
+
+export const getUsers = async () => {
+  const response = await axios.get(`${API_URL}/users`);
+  return response.data;
+};
+
+export const createUser = async (userData) => {
+  const response = await axios.post(`${API_URL}/users`, userData);
+  return response.data;
+};
+
+export const updateUser = async (id, userData) => {
+  const response = await axios.put(`${API_URL}/users/${id}`, userData);
+  return response.data;
+};
+
+export const deleteUser = async (id) => {
+  await axios.delete(`${API_URL}/users/${id}`);
+};
+
+export const getTransactions = async () => {
+  const response = await axios.get(`${API_URL}/transactions`);
+  return response.data;
+};
+
+export const createTransaction = async (transactionData) => {
+  const response = await axios.post(`${API_URL}/transactions`, transactionData);
+  return response.data;
+};
 
 export const getSubjects = async () => {
-  console.log('getSubjects called, returning:', mockData.subjects); // Debug
-  return [...mockData.subjects]; // Return a copy
+  const response = await axios.get(`${API_URL}/subjects`);
+  return response.data;
 };
 
 export const createSubject = async (subjectData) => {
-  console.log('Creating subject:', subjectData); // Debug
-  const existingSubject = mockData.subjects.find(
-    (subject) =>
-      subject.nome === subjectData.nome || subject.codigo === subjectData.codigo
-  );
-  if (existingSubject) throw new Error('Nome ou código da disciplina já está em uso.');
-
-  const newSubject = {
-    ...subjectData,
-    id: uuidv4(),
-  };
-  mockData.subjects = [...mockData.subjects, newSubject];
-  console.log('Updated mockData.subjects:', mockData.subjects); // Debug
-  return newSubject;
+  const response = await axios.post(`${API_URL}/subjects`, subjectData);
+  return response.data;
 };
 
 export const updateSubject = async (id, subjectData) => {
-  const index = mockData.subjects.findIndex((subject) => subject.id === id);
-  if (index === -1) throw new Error('Disciplina não encontrada.');
-
-  const existingSubject = mockData.subjects.find(
-    (subject) =>
-      (subject.nome === subjectData.nome || subject.codigo === subjectData.codigo) &&
-      subject.id !== id
-  );
-  if (existingSubject) throw new Error('Nome ou código da disciplina já está em uso.');
-
-  const updatedSubject = {
-    ...mockData.subjects[index],
-    ...subjectData,
-    id,
-  };
-  mockData.subjects[index] = updatedSubject;
-  console.log('Updated mockData.subjects:', mockData.subjects); // Debug
-  return updatedSubject;
+  const response = await axios.put(`${API_URL}/subjects/${id}`, subjectData);
+  return response.data;
 };
 
 export const deleteSubject = async (id) => {
-  const index = mockData.subjects.findIndex((subject) => subject.id === id);
-  if (index === -1) throw new Error('Disciplina não encontrada.');
-  mockData.subjects.splice(index, 1);
-  console.log('Updated mockData.subjects:', mockData.subjects); // Debug
+  await axios.delete(`${API_URL}/subjects/${id}`);
+};
+
+export const getClasses = async () => {
+  const response = await axios.get(`${API_URL}/classes`);
+  return response.data;
+};
+
+export const createClass = async (classData) => {
+  const response = await axios.post(`${API_URL}/classes`, classData);
+  return response.data;
+};
+
+export const updateClass = async (id, classData) => {
+  const response = await axios.put(`${API_URL}/classes/${id}`, classData);
+  return response.data;
+};
+
+export const deleteClass = async (id) => {
+  await axios.delete(`${API_URL}/classes/${id}`);
+};
+
+export const getEnrollments = async () => {
+  const response = await axios.get(`${API_URL}/enrollments`);
+  return response.data;
 };
 
 export const createStudentEnrollment = async (enrollmentData) => {
-  console.log('Creating student enrollment:', enrollmentData); // Debug
-  const student = mockData.users.find(
-    (user) => user.id === enrollmentData.aluno_id && user.tipo_utilizador === 'ALUNO'
-  );
-  const subject = mockData.subjects.find((subject) => subject.id === enrollmentData.disciplina_id);
-  if (!student) throw new Error('Aluno não encontrado.');
-  if (!subject) throw new Error('Disciplina não encontrada.');
-
-  const existingEnrollment = mockData.aluno_disciplina.find(
-    (ad) =>
-      ad.aluno_id === enrollmentData.aluno_id &&
-      ad.disciplina_id === enrollmentData.disciplina_id &&
-      ad.ano_letivo === enrollmentData.ano_letivo &&
-      ad.ativo
-  );
-  if (existingEnrollment) throw new Error('Aluno já está inscrito nesta disciplina para o ano letivo.');
-
-  const newEnrollment = {
-    ...enrollmentData,
-    id: uuidv4(),
-    ativo: true,
-  };
-  mockData.aluno_disciplina = [...mockData.aluno_disciplina, newEnrollment];
-  console.log('Updated mockData.aluno_disciplina:', mockData.aluno_disciplina); // Debug
-  return newEnrollment;
+  const response = await axios.post(`${API_URL}/enroll`, enrollmentData);
+  return response.data;
 };
 
-export const removeStudentEnrollment = async (enrollmentId) => {
-  console.log('Removing student enrollment:', enrollmentId); // Debug
-  const index = mockData.aluno_disciplina.findIndex((ad) => ad.id === enrollmentId);
-  if (index === -1) throw new Error('Inscrição não encontrada.');
-  mockData.aluno_disciplina[index] = { ...mockData.aluno_disciplina[index], ativo: false };
-  console.log('Updated mockData.aluno_disciplina:', mockData.aluno_disciplina); // Debug
+export const removeStudentEnrollment = async (id) => {
+  await axios.delete(`${API_URL}/enrollments/${id}`);
+};
+
+export const getTransactionRules = async () => {
+  const response = await axios.get(`${API_URL}/transactionRules`);
+  return response.data;
+};
+
+export const createTransactionRule = async (ruleData) => {
+  const response = await axios.post(`${API_URL}/transactionRules`, ruleData);
+  return response.data;
+};
+
+export const updateTransactionRule = async (id, ruleData) => {
+  const response = await axios.put(`${API_URL}/transactionRules/${id}`, ruleData);
+  return response.data;
+};
+
+export const getCiclos = async () => {
+  const response = await axios.get(`${API_URL}/ciclos`);
+  return response.data;
+};
+
+export const getAlunoTurma = async () => {
+  const response = await axios.get(`${API_URL}/aluno_turma`);
+  return response.data;
+};
+
+export const createAlunoTurma = async (enrollmentData) => {
+  const response = await axios.post(`${API_URL}/aluno_turma`, enrollmentData);
+  return response.data;
+};
+
+export const updateAlunoTurma = async (id, enrollmentData) => {
+  const response = await axios.put(`${API_URL}/aluno_turma/${id}`, enrollmentData);
+  return response.data;
+};
+
+export const getDisciplinaTurma = async () => {
+  const response = await axios.get(`${API_URL}/disciplina_turma`);
+  return response.data;
+};
+
+export const createDisciplinaTurma = async (data) => {
+  const response = await axios.post(`${API_URL}/disciplina_turma`, data);
+  return response.data;
+};
+
+export const getProfessorDisciplinaTurma = async () => {
+  const response = await axios.get(`${API_URL}/professor_disciplina_turma`);
+  return response.data;
 };
 
 export const createTeacherAssignment = async (assignmentData) => {
-  console.log('Creating teacher assignment:', assignmentData); // Debug
-  const teacher = mockData.users.find(
-    (user) => user.id === assignmentData.professor_id && user.tipo_utilizador === 'PROFESSOR'
-  );
-  const subject = mockData.subjects.find((subject) => subject.id === assignmentData.disciplina_id);
-  const classe = mockData.classes.find((cls) => cls.id === assignmentData.turma_id);
-  if (!teacher) throw new Error('Professor não encontrado.');
-  if (!subject) throw new Error('Disciplina não encontrada.');
-  if (!classe) throw new Error('Turma não encontrada.');
-
-  const existingAssignment = mockData.professor_disciplina_turma.find(
-    (pdt) =>
-      pdt.professor_id === assignmentData.professor_id &&
-      pdt.disciplina_id === assignmentData.disciplina_id &&
-      pdt.turma_id === assignmentData.turma_id &&
-      pdt.ano_letivo === assignmentData.ano_letivo &&
-      pdt.ativo
-  );
-  if (existingAssignment) throw new Error('Professor já está atribuído a esta disciplina e turma para o ano letivo.');
-
-  const newAssignment = {
-    ...assignmentData,
-    id: uuidv4(),
-    ativo: true,
-  };
-  mockData.professor_disciplina_turma = [...mockData.professor_disciplina_turma, newAssignment];
-  console.log('Updated mockData.professor_disciplina_turma:', mockData.professor_disciplina_turma); // Debug
-  return newAssignment;
+  const response = await axios.post(`${API_URL}/professor_disciplina_turma`, assignmentData);
+  return response.data;
 };
 
-export const removeTeacherAssignment = async (assignmentId) => {
-  console.log('Removing teacher assignment:', assignmentId); // Debug
-  const index = mockData.professor_disciplina_turma.findIndex((pdt) => pdt.id === assignmentId);
-  if (index === -1) throw new Error('Atribuição não encontrada.');
-  mockData.professor_disciplina_turma[index] = { ...mockData.professor_disciplina_turma[index], ativo: false };
-  console.log('Updated mockData.professor_disciplina_turma:', mockData.professor_disciplina_turma); // Debug
+export const removeTeacherAssignment = async (id) => {
+  await axios.delete(`${API_URL}/professor_disciplina_turma/${id}`);
 };

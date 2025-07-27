@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import * as api from '../services/api';
+import * as userService from '../services/userService';
 import {
   Users,
   Coins,
@@ -25,6 +26,7 @@ import {
   Mail,
   Phone
 } from 'lucide-react';
+import UserModal from './components/UserModal';
 
 const ValCoinAdmin = () => {
   const [activeTab, setActiveTab] = useState('dashboard');
@@ -61,30 +63,31 @@ const ValCoinAdmin = () => {
     { id: 'settings', label: 'Configurações', icon: Settings }
   ];
 
+  const fetchData = async () => {
+    setLoading(true);
+    try {
+      const [users, transactions, subjects, classes, criteria] = await Promise.all([
+        userService.getUsers(),
+        api.getTransactions(),
+        api.getSubjects(),
+        api.getClasses(),
+        api.getCriteria(),
+      ]);
+      setMockData({
+        users: users,
+        transactions: transactions.data,
+        subjects: subjects.data,
+        classes: classes.data,
+        criteria: criteria.data,
+        aluno_disciplina: [],
+      });
+    } catch (error) {
+      setError(error.message);
+    }
+    setLoading(false);
+  };
+
   useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true);
-      try {
-        const [users, transactions, subjects, classes, criteria] = await Promise.all([
-          api.getUsers(),
-          api.getTransactions(),
-          api.getSubjects(),
-          api.getClasses(),
-          api.getCriteria(),
-        ]);
-        setMockData({
-          users: users.data,
-          transactions: transactions.data,
-          subjects: subjects.data,
-          classes: classes.data,
-          criteria: criteria.data,
-          aluno_disciplina: [],
-        });
-      } catch (error) {
-        setError(error.message);
-      }
-      setLoading(false);
-    };
     fetchData();
   }, []);
 
@@ -160,12 +163,12 @@ const ValCoinAdmin = () => {
           } else {
             await api.updateClass(formData.id, classData);
           }
-        } else if (activeTab === 'users' && formData.tipo_utilizador === 'ALUNO') {
-          const studentData = {
+        } else if (activeTab === 'users') {
+          const userData = {
             numero_mecanografico: formData.numero_mecanografico,
             nome: formData.nome,
             email: formData.email,
-            tipo_utilizador: 'ALUNO',
+            tipo_utilizador: formData.tipo_utilizador,
             ativo: formData.ativo === 'true',
             numero_aluno: formData.numero_aluno,
             turma_id: formData.turma_id,
@@ -178,9 +181,9 @@ const ValCoinAdmin = () => {
             saldo_vc: formData.saldo_vc || 0
           };
           if (modalType === 'create') {
-            await api.createUser(studentData);
+            await userService.createUser(userData);
           } else {
-            await api.updateUser(formData.id, studentData);
+            await userService.updateUser(formData.id, userData);
           }
         } else if (activeTab === 'subjects') {
           const subjectData = {
@@ -232,7 +235,7 @@ const ValCoinAdmin = () => {
         if (activeTab === 'classes') {
           await api.deleteClass(formData.id);
         } else if (activeTab === 'users') {
-          await api.deleteUser(formData.id);
+          await userService.deleteUser(formData.id);
         } else if (activeTab === 'subjects') {
           await api.deleteSubject(formData.id);
         } else if (activeTab === 'criteria') {
@@ -242,31 +245,6 @@ const ValCoinAdmin = () => {
         }
       }
       closeModal();
-      // Refresh data
-      const fetchData = async () => {
-        setLoading(true);
-        try {
-          const [users, transactions, subjects, classes, criteria] = await Promise.all([
-            api.getUsers(),
-            api.getTransactions(),
-            api.getSubjects(),
-            api.getClasses(),
-            api.getCriteria(),
-          ]);
-          setMockData({
-            users: users.data,
-            transactions: transactions.data,
-            subjects: subjects.data,
-            classes: classes.data,
-            criteria: criteria.data,
-            aluno_disciplina: [],
-          });
-          setCurrentData(users.data);
-        } catch (error) {
-          setError(error.message);
-        }
-        setLoading(false);
-      };
       fetchData();
     } catch (err) {
       setError('Erro ao processar a operação: ' + err.message);
@@ -1235,7 +1213,7 @@ const ValCoinAdmin = () => {
       case 'dashboard':
         return renderDashboard();
       case 'users':
-        return <Users users={mockData.users} setUsers={(newUsers) => setMockData(prev => ({ ...prev, users: newUsers }))} openModal={openModal} />;
+        return <Users users={mockData.users} openModal={openModal} />;
       case 'transactions':
         return renderTransactions();
       case 'subjects':
@@ -1431,9 +1409,7 @@ const ValCoinAdmin = () => {
           </div>
         </div>
       </div>
-      {renderModal()}
+      {renderModal() && <UserModal {...{ showModal, closeModal, modalType, selectedItem, createUser: handleSubmit, updateUser: handleSubmit, deleteUser: handleSubmit, refreshUsers: fetchData }} />}
     </div>
   );
 };
-
-export default ValCoinAdmin;
